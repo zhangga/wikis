@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F1E8"/>
+      <stop offset="100%" stop-color="#E5F0F2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1190" cy="240" r="150" fill="#D96C4F" opacity="0.18"/>
+  <circle cx="1320" cy="720" r="210" fill="#16333B" opacity="0.10"/>
+  <rect x="110" y="120" width="108" height="12" rx="6" fill="#D96C4F"/>
+  <text x="110" y="250" font-size="74" font-family="'Microsoft YaHei', sans-serif" font-weight="700" fill="#16333B">AI 时代的</text>
+  <text x="110" y="360" font-size="108" font-family="'Microsoft YaHei', sans-serif" font-weight="700" fill="#16333B">超级个体</text>
+  <text x="110" y="450" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#4C6570">听完宝玉这场分享，我重新理解了</text>
+  <text x="110" y="500" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#4C6570">学习、输出、工作流自动化，如何把一个人放大成一支队伍</text>
+
+  <rect x="110" y="610" rx="28" ry="28" width="1260" height="140" fill="#FFFFFF" opacity="0.88"/>
+  <text x="160" y="680" font-size="32" font-family="'Microsoft YaHei', sans-serif" fill="#9D4D30" font-weight="700">关键词</text>
+  <text x="310" y="680" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">费曼学习法</text>
+  <text x="540" y="680" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">Agent 工作流</text>
+  <text x="800" y="680" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">工具组合</text>
+  <text x="1010" y="680" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">长期判断力</text>
+</svg>

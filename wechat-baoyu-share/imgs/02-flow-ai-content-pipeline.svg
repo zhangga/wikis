@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F6F8FB"/>
+  <text x="120" y="120" font-size="52" font-family="'Microsoft YaHei', sans-serif" fill="#152A4A" font-weight="700">AI 内容生产工作流</text>
+  <text x="120" y="170" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#5A6F8E">把重复劳动交给工具，把判断和质量把关留给人</text>
+
+  <rect x="120" y="280" rx="30" ry="30" width="250" height="280" fill="#EAF1FF" stroke="#B8C9F5" stroke-width="3"/>
+  <text x="170" y="360" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#152A4A" font-weight="700">输入源</text>
+  <text x="170" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#385175">Youtube 分享</text>
+  <text x="170" y="460" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#385175">X / 网页 / 长文</text>
+
+  <rect x="430" y="280" rx="30" ry="30" width="250" height="280" fill="#EEF8F3" stroke="#BFE1CE" stroke-width="3"/>
+  <text x="478" y="360" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#163A2D" font-weight="700">提取</text>
+  <text x="478" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#36594B">字幕抓取</text>
+  <text x="478" y="460" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#36594B">资料归档</text>
+  <text x="478" y="500" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#36594B">信息去噪</text>
+
+  <rect x="740" y="280" rx="30" ry="30" width="250" height="280" fill="#FFF6E8" stroke="#F0D7A8" stroke-width="3"/>
+  <text x="788" y="360" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#5B3B00" font-weight="700">生成</text>
+  <text x="788" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#7A5920">翻译与摘要</text>
+  <text x="788" y="460" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#7A5920">结构化写稿</text>
+  <text x="788" y="500" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#7A5920">补充标题与提炼</text>
+
+  <rect x="1050" y="280" rx="30" ry="30" width="250" height="280" fill="#FFF0F0" stroke="#E8C0C0" stroke-width="3"/>
+  <text x="1098" y="360" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#5A2020" font-weight="700">质检</text>
+  <text x="1098" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#7A4343">事实校正</text>
+  <text x="1098" y="460" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#7A4343">表达润色</text>
+  <text x="1098" y="500" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#7A4343">删掉空话套话</text>
+
+  <rect x="1360" y="280" rx="30" ry="30" width="120" height="280" fill="#152A4A"/>
+  <text x="1390" y="360" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#FFFFFF" font-weight="700">发布</text>
+  <text x="1388" y="420" font-size="20" font-family="'Microsoft YaHei', sans-serif" fill="#DCE8FF">封面</text>
+  <text x="1388" y="455" font-size="20" font-family="'Microsoft YaHei', sans-serif" fill="#DCE8FF">配图</text>
+  <text x="1388" y="490" font-size="20" font-family="'Microsoft YaHei', sans-serif" fill="#DCE8FF">文章</text>
+
+  <path d="M370 420 H430" stroke="#5A6F8E" stroke-width="8" fill="none"/>
+  <path d="M680 420 H740" stroke="#5A6F8E" stroke-width="8" fill="none"/>
+  <path d="M990 420 H1050" stroke="#5A6F8E" stroke-width="8" fill="none"/>
+  <path d="M1300 420 H1360" stroke="#5A6F8E" stroke-width="8" fill="none"/>
+
+  <polygon points="430,420 408,406 408,434" fill="#5A6F8E"/>
+  <polygon points="740,420 718,406 718,434" fill="#5A6F8E"/>
+  <polygon points="1050,420 1028,406 1028,434" fill="#5A6F8E"/>
+  <polygon points="1360,420 1338,406 1338,434" fill="#5A6F8E"/>
+
+  <rect x="180" y="660" rx="28" ry="28" width="1240" height="120" fill="#FFFFFF" stroke="#D8E1EE" stroke-width="3"/>
+  <text x="220" y="730" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#152A4A" font-weight="700">人的核心价值：选题、判断、结构、审美、最后一公里质量把关</text>
+</svg>

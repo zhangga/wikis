@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <rect width="1242" height="1660" fill="#F4FBF7"/>
+  <text x="90" y="170" font-size="60" font-family="'Microsoft YaHei', sans-serif" fill="#3A8E67" font-weight="700">04 真正厉害的是工作流</text>
+  <rect x="90" y="300" rx="28" ry="28" width="1060" height="180" fill="#FFFFFF"/>
+  <text x="150" y="410" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">抓取内容</text>
+  <text x="1020" y="410" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#3A8E67" font-weight="700">01</text>
+  <rect x="90" y="530" rx="28" ry="28" width="1060" height="180" fill="#FFFFFF"/>
+  <text x="150" y="640" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">提炼重点</text>
+  <text x="1020" y="640" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#3A8E67" font-weight="700">02</text>
+  <rect x="90" y="760" rx="28" ry="28" width="1060" height="180" fill="#FFFFFF"/>
+  <text x="150" y="870" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">生成初稿</text>
+  <text x="1020" y="870" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#3A8E67" font-weight="700">03</text>
+  <rect x="90" y="990" rx="28" ry="28" width="1060" height="180" fill="#FFFFFF"/>
+  <text x="150" y="1100" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">人工质检</text>
+  <text x="1020" y="1100" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#3A8E67" font-weight="700">04</text>
+  <rect x="90" y="1220" rx="28" ry="28" width="1060" height="180" fill="#FFFFFF"/>
+  <text x="150" y="1330" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">配图发布</text>
+  <text x="1020" y="1330" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#3A8E67" font-weight="700">05</text>
+</svg>

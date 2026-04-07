@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF6EC"/>
+      <stop offset="100%" stop-color="#F3FAFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1242" height="1660" fill="url(#bg)"/>
+  <circle cx="975" cy="280" r="180" fill="#FFB88C" opacity="0.35"/>
+  <circle cx="1020" cy="1320" r="220" fill="#A6D7E8" opacity="0.25"/>
+  <rect x="88" y="90" width="190" height="56" rx="28" fill="#FF7E6B"/>
+  <text x="122" y="128" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#FFFFFF" font-weight="700">女生请收藏</text>
+  <text x="92" y="348" font-size="76" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">女生在 AI 时代</text>
+  <text x="92" y="490" font-size="118" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">最该补的</text>
+  <text x="92" y="640" font-size="144" font-family="'Microsoft YaHei', sans-serif" fill="#D96C4F" font-weight="700">8 个能力</text>
+  <text x="96" y="778" font-size="36" font-family="'Microsoft YaHei', sans-serif" fill="#5C7077">听完宝玉分享后</text>
+  <text x="96" y="832" font-size="36" font-family="'Microsoft YaHei', sans-serif" fill="#5C7077">我做的女性成长向整理</text>
+  <rect x="88" y="980" rx="38" ry="38" width="1060" height="410" fill="#FFFFFF" opacity="0.92"/>
+  <text x="140" y="1088" font-size="46" font-family="'Microsoft YaHei', sans-serif" fill="#D96C4F" font-weight="700">尤其适合这 3 类女生</text>
+  <text x="144" y="1176" font-size="40" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">想认真提升自己但有点焦虑</text>
+  <text x="144" y="1254" font-size="40" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">已经接触 AI 但总觉得没用顺</text>
+  <text x="144" y="1332" font-size="40" font-family="'Microsoft YaHei', sans-serif" fill="#16333B">想把成长和工作方式一起升级</text>
+</svg>

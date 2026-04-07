@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <rect width="1242" height="1660" fill="#FFF9F4"/>
+  <text x="90" y="170" font-size="60" font-family="'Microsoft YaHei', sans-serif" fill="#B56A30" font-weight="700">05 什么值得你投入？</text>
+  <line x1="210" y1="1320" x2="1050" y2="1320" stroke="#7A6658" stroke-width="4"/>
+  <line x1="210" y1="1320" x2="210" y2="420" stroke="#7A6658" stroke-width="4"/>
+  <line x1="630" y1="420" x2="630" y2="1320" stroke="#CBB8A5" stroke-width="3" stroke-dasharray="10 10"/>
+  <line x1="210" y1="870" x2="1050" y2="870" stroke="#CBB8A5" stroke-width="3" stroke-dasharray="10 10"/>
+  <text x="820" y="1385" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#7A6658">长期价值 →</text>
+  <text x="95" y="500" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#7A6658" transform="rotate(-90 95,500)">提效程度 ↑</text>
+  <text x="720" y="650" font-size="42" font-family="'Microsoft YaHei', sans-serif" fill="#1F5A36" font-weight="700">重点投入</text>
+  <text x="720" y="710" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#1F5A36">提效高 + 长期有效</text>
+  <text x="305" y="650" font-size="42" font-family="'Microsoft YaHei', sans-serif" fill="#B56A30" font-weight="700">保持关注</text>
+  <text x="305" y="710" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#B56A30">提效高 + 可能短期</text>
+  <text x="710" y="1100" font-size="42" font-family="'Microsoft YaHei', sans-serif" fill="#455C79" font-weight="700">按需学习</text>
+  <text x="305" y="1100" font-size="42" font-family="'Microsoft YaHei', sans-serif" fill="#8A4A52" font-weight="700">谨慎围观</text>
+</svg>

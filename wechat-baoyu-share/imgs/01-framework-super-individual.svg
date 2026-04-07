@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F4EC"/>
+      <stop offset="100%" stop-color="#E8F1F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="120" y="120" font-size="52" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">从程序员到 AI 超级个体</text>
+  <text x="120" y="170" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#4C6570">宝玉分享的核心不是某个工具，而是一整套能力放大系统</text>
+
+  <rect x="120" y="250" rx="24" ry="24" width="250" height="360" fill="#FFFFFF" stroke="#D7E3E2" stroke-width="3"/>
+  <text x="155" y="320" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">01 学习</text>
+  <text x="155" y="378" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">扑进去试</text>
+  <text x="155" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">大量吸收一手信息</text>
+  <text x="155" y="462" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">建立自己的知识树</text>
+
+  <rect x="420" y="250" rx="24" ry="24" width="250" height="360" fill="#FFFFFF" stroke="#D7E3E2" stroke-width="3"/>
+  <text x="455" y="320" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">02 分享</text>
+  <text x="455" y="378" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">费曼学习法</text>
+  <text x="455" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">输出驱动理解</text>
+  <text x="455" y="462" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">反馈推动迭代</text>
+
+  <rect x="720" y="250" rx="24" ry="24" width="250" height="360" fill="#FFFFFF" stroke="#D7E3E2" stroke-width="3"/>
+  <text x="755" y="320" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">03 工作流</text>
+  <text x="755" y="378" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">抓取、翻译、写稿</text>
+  <text x="755" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">配图逐步自动化</text>
+  <text x="755" y="462" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">30 分钟出一篇稿</text>
+
+  <rect x="1020" y="250" rx="24" ry="24" width="250" height="360" fill="#FFFFFF" stroke="#D7E3E2" stroke-width="3"/>
+  <text x="1055" y="320" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#16333B" font-weight="700">04 工具栈</text>
+  <text x="1055" y="378" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">Claude 看综合体验</text>
+  <text x="1055" y="420" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">Codex 看编程交付</text>
+  <text x="1055" y="462" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#35515A">Gemini 看长文与多模态</text>
+
+  <rect x="1320" y="250" rx="24" ry="24" width="160" height="360" fill="#16333B"/>
+  <text x="1362" y="320" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#F8FBFB" font-weight="700">05</text>
+  <text x="1352" y="378" font-size="30" font-family="'Microsoft YaHei', sans-serif" fill="#F8FBFB" font-weight="700">判断</text>
+  <text x="1348" y="430" font-size="22" font-family="'Microsoft YaHei', sans-serif" fill="#D6E8E7">看提效</text>
+  <text x="1348" y="468" font-size="22" font-family="'Microsoft YaHei', sans-serif" fill="#D6E8E7">看长期</text>
+  <text x="1348" y="506" font-size="22" font-family="'Microsoft YaHei', sans-serif" fill="#D6E8E7">不被热点带跑</text>
+
+  <path d="M370 430 C395 430, 395 430, 420 430" stroke="#D96C4F" stroke-width="6" fill="none"/>
+  <path d="M670 430 C695 430, 695 430, 720 430" stroke="#D96C4F" stroke-width="6" fill="none"/>
+  <path d="M970 430 C995 430, 995 430, 1020 430" stroke="#D96C4F" stroke-width="6" fill="none"/>
+  <path d="M1270 430 C1290 430, 1295 430, 1320 430" stroke="#D96C4F" stroke-width="6" fill="none"/>
+
+  <rect x="120" y="690" rx="28" ry="28" width="1360" height="110" fill="#FFF8F1" stroke="#E8D5BE" stroke-width="3"/>
+  <text x="170" y="755" font-size="32" font-family="'Microsoft YaHei', sans-serif" fill="#9D4D30" font-weight="700">结论：真正的超级个体 = 持续学习 × 持续输出 × 工作流自动化 × 工具组合能力 × 长期判断力</text>
+</svg>

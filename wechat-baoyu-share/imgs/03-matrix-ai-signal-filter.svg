@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#FBFAF6"/>
+  <text x="120" y="120" font-size="52" font-family="'Microsoft YaHei', sans-serif" fill="#2D2A26" font-weight="700">AI 信息筛选四象限</text>
+  <text x="120" y="170" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#6C665D">不是所有热点都值得追，把精力投给真正有复利的方向</text>
+
+  <line x1="260" y1="720" x2="1360" y2="720" stroke="#504A43" stroke-width="4"/>
+  <line x1="260" y1="720" x2="260" y2="240" stroke="#504A43" stroke-width="4"/>
+  <line x1="810" y1="240" x2="810" y2="720" stroke="#B7AEA1" stroke-width="3" stroke-dasharray="10 10"/>
+  <line x1="260" y1="480" x2="1360" y2="480" stroke="#B7AEA1" stroke-width="3" stroke-dasharray="10 10"/>
+
+  <text x="1330" y="760" font-size="28" font-family="'Microsoft YaHei', sans-serif" fill="#504A43">长期价值 →</text>
+  <text x="170" y="260" font-size="28" font-family="'Microsoft YaHei', sans-serif" fill="#504A43" transform="rotate(-90 170,260)">提效程度 ↑</text>
+
+  <rect x="850" y="280" rx="26" ry="26" width="430" height="150" fill="#E9F6EE" stroke="#B7D9C0" stroke-width="3"/>
+  <text x="890" y="340" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#1F5A36" font-weight="700">高提效 + 长期</text>
+  <text x="890" y="388" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#356D4A">重点投入</text>
+  <text x="890" y="425" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#356D4A">例如：Prompt、Claude Code、成熟 Agent 工作流</text>
+
+  <rect x="330" y="280" rx="26" ry="26" width="430" height="150" fill="#FFF4D8" stroke="#E8D49A" stroke-width="3"/>
+  <text x="370" y="340" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#7D5700" font-weight="700">高提效 + 短期</text>
+  <text x="370" y="388" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#8A6A23">保持关注</text>
+  <text x="370" y="425" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#8A6A23">能用就用，但别重仓依赖</text>
+
+  <rect x="850" y="530" rx="26" ry="26" width="430" height="150" fill="#EEF1F7" stroke="#CCD5E5" stroke-width="3"/>
+  <text x="890" y="590" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#364A6B" font-weight="700">低提效 + 长期</text>
+  <text x="890" y="638" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#556785">按需学习</text>
+  <text x="890" y="675" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#556785">知道它重要，但不必现在重投入</text>
+
+  <rect x="330" y="530" rx="26" ry="26" width="430" height="150" fill="#FCEBEC" stroke="#E5C4C8" stroke-width="3"/>
+  <text x="370" y="590" font-size="34" font-family="'Microsoft YaHei', sans-serif" fill="#7A2A34" font-weight="700">低提效 + 短期</text>
+  <text x="370" y="638" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#8A4A52">谨慎围观</text>
+  <text x="370" y="675" font-size="24" font-family="'Microsoft YaHei', sans-serif" fill="#8A4A52">避免被热点和炒作牵着走</text>
+</svg>
