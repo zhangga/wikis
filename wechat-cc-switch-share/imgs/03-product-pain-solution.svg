@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F4F7F8"/>
+  <text x="110" y="110" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">CC Switch 命中的痛点与解法</text>
+  <text x="110" y="160" font-size="26" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#60767B">先回答“用户今天卡在哪里”，再回答“我还能做什么”</text>
+
+  <rect x="120" y="240" width="380" height="470" rx="30" fill="#FFF1EC" stroke="#F0D2C8" stroke-width="3"/>
+  <text x="170" y="320" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#8A3C28">用户摩擦</text>
+  <text x="170" y="395" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5D504B">1. 供应商切换频繁</text>
+  <text x="170" y="450" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5D504B">2. 配置字段碎且重复</text>
+  <text x="170" y="505" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5D504B">3. 脚本方案门槛太高</text>
+  <text x="170" y="560" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5D504B">4. 真实障碍是摩擦成本</text>
+
+  <rect x="610" y="240" width="380" height="470" rx="30" fill="#FFFFFF" stroke="#D7E2E1" stroke-width="3"/>
+  <text x="670" y="320" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">产品动作</text>
+  <text x="670" y="395" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#42595E">1. 抽象通用配置</text>
+  <text x="670" y="450" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#42595E">2. 一键切换 Key 和供应商</text>
+  <text x="670" y="505" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#42595E">3. 用 GUI 降低门槛</text>
+  <text x="670" y="560" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#42595E">4. 让默认路径足够顺</text>
+
+  <rect x="1100" y="240" width="380" height="470" rx="30" fill="#EEF8F4" stroke="#CDE4DA" stroke-width="3"/>
+  <text x="1160" y="320" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#24584E">用户感知</text>
+  <text x="1160" y="395" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#41685F">切换更快</text>
+  <text x="1160" y="450" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#41685F">维护更少</text>
+  <text x="1160" y="505" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#41685F">不懂脚本也能上手</text>
+  <text x="1160" y="560" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#41685F">愿意留下来继续用</text>
+
+  <path d="M500 470 H610" stroke="#D96E4A" stroke-width="10" fill="none"/>
+  <path d="M990 470 H1100" stroke="#17343B" stroke-width="10" fill="none"/>
+  <polygon points="610,470 580,452 580,488" fill="#D96E4A"/>
+  <polygon points="1100,470 1070,452 1070,488" fill="#17343B"/>
+</svg>

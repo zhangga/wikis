@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <rect width="1242" height="1660" fill="#FFF9F2"/>
+  <text x="80" y="150" font-size="62" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">坑 3 别只把 AI</text>
+  <text x="80" y="225" font-size="62" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">当聊天框</text>
+  <rect x="120" y="430" width="1000" height="170" rx="34" fill="#FFFFFF"/>
+  <text x="200" y="530" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">找资料</text>
+  <text x="430" y="530" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">提炼重点</text>
+  <text x="790" y="530" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">AI 初稿</text>
+  <rect x="120" y="700" width="1000" height="170" rx="34" fill="#FFFFFF"/>
+  <text x="220" y="800" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">自己修改</text>
+  <text x="600" y="800" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">交付</text>
+  <text x="820" y="800" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">发布</text>
+  <line x1="270" y1="600" x2="270" y2="700" stroke="#E26F4F" stroke-width="10"/>
+  <line x1="500" y1="600" x2="500" y2="700" stroke="#E26F4F" stroke-width="10"/>
+  <line x1="760" y1="600" x2="760" y2="700" stroke="#E26F4F" stroke-width="10"/>
+  <text x="80" y="1220" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">真正拉开差距的</text>
+  <text x="80" y="1305" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46" font-weight="700">是把 AI 接成最小工作流</text>
+</svg>

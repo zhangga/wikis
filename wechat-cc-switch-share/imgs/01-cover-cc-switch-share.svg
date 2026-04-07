@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6F0E6"/>
+      <stop offset="100%" stop-color="#E8F0EF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="220" r="170" fill="#D96E4A" opacity="0.16"/>
+  <circle cx="1380" cy="700" r="220" fill="#17343B" opacity="0.10"/>
+  <rect x="110" y="110" width="120" height="12" rx="6" fill="#D96E4A"/>
+  <text x="110" y="215" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#6A7B80">CC Switch 作者分享</text>
+  <text x="110" y="335" font-size="78" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">独立开发者真正重要的</text>
+  <text x="110" y="445" font-size="100" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">不是追热点</text>
+  <text x="110" y="535" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#506368">而是把真实痛点做深</text>
+
+  <rect x="110" y="625" width="1340" height="140" rx="30" fill="#FFFFFF" opacity="0.90"/>
+  <text x="160" y="690" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#9D4E32" font-weight="700">这篇文章会讲清 4 件事</text>
+  <text x="160" y="740" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#17343B">01 从真实摩擦出发做产品  ·  02 把学习变成 Demo 和反馈  ·  03 用重构给增长修路  ·  04 把 AI 变成稳定工作流</text>
+
+  <rect x="1180" y="120" width="210" height="210" rx="30" fill="#17343B"/>
+  <text x="1235" y="210" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#F8FBFB" font-weight="700">接近</text>
+  <text x="1210" y="285" font-size="72" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#F8FBFB" font-weight="700">3万</text>
+  <text x="1242" y="325" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#DCE7E7">GitHub Star</text>
+</svg>

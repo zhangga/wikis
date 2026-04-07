@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <rect width="1242" height="1660" fill="#F8FBFB"/>
+  <circle cx="1030" cy="250" r="120" fill="#DDECEF"/>
+  <circle cx="170" cy="1370" r="100" fill="#FFDCCB"/>
+  <text x="80" y="150" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">差距往往不在</text>
+  <text x="80" y="222" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">工具多少</text>
+  <rect x="80" y="340" width="1080" height="820" rx="48" fill="#FFFFFF"/>
+  <text x="140" y="460" font-size="42" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">而在你有没有反复踩这 4 个坑：</text>
+  <text x="140" y="610" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">1. 只收藏，不输出</text>
+  <text x="140" y="740" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">2. 每次都从零开始</text>
+  <text x="140" y="870" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">3. 只会聊天，不接流程</text>
+  <text x="140" y="1000" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">4. 总追新工具，不做筛选</text>
+  <rect x="120" y="1240" width="1000" height="200" rx="40" fill="#FFF2EA"/>
+  <text x="190" y="1330" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">不是学得少</text>
+  <text x="190" y="1395" font-size="54" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46" font-weight="700">而是没跑顺</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F4EC"/>
+  <text x="110" y="110" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">开源增长飞轮</text>
+  <text x="110" y="160" font-size="26" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#64767B">产品力、迭代速度和社区感知连起来，增长就不再只是运气</text>
+
+  <circle cx="800" cy="450" r="250" fill="#FFFFFF" stroke="#D9E0DE" stroke-width="4"/>
+  <circle cx="800" cy="450" r="110" fill="#17343B"/>
+  <text x="740" y="440" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#F4F8F8" font-weight="700">真实问题</text>
+  <text x="742" y="490" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#D6E3E3">持续打磨</text>
+
+  <rect x="690" y="120" width="220" height="100" rx="24" fill="#FFF1EC" stroke="#F0D4CA" stroke-width="3"/>
+  <text x="730" y="180" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#8F422C" font-weight="700">默认路径顺</text>
+
+  <rect x="1110" y="350" width="250" height="100" rx="24" fill="#FFF7E9" stroke="#EAD7AF" stroke-width="3"/>
+  <text x="1155" y="410" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#6A542A" font-weight="700">用户愿意留</text>
+
+  <rect x="980" y="650" width="280" height="100" rx="24" fill="#EEF7F5" stroke="#D3E4DF" stroke-width="3"/>
+  <text x="1035" y="710" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#2E6158" font-weight="700">社区开始传播</text>
+
+  <rect x="340" y="650" width="280" height="100" rx="24" fill="#F1F5FB" stroke="#D8E1EE" stroke-width="3"/>
+  <text x="405" y="710" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#30506D" font-weight="700">更快迭代修正</text>
+
+  <rect x="220" y="350" width="250" height="100" rx="24" fill="#FFF1EC" stroke="#F0D4CA" stroke-width="3"/>
+  <text x="285" y="410" font-size="30" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#8F422C" font-weight="700">形成口碑</text>
+
+  <path d="M800 220 A230 230 0 0 1 1110 350" stroke="#D96E4A" stroke-width="8" fill="none"/>
+  <path d="M1240 450 A230 230 0 0 1 1120 650" stroke="#D96E4A" stroke-width="8" fill="none"/>
+  <path d="M980 740 A230 230 0 0 1 620 740" stroke="#D96E4A" stroke-width="8" fill="none"/>
+  <path d="M340 650 A230 230 0 0 1 250 450" stroke="#D96E4A" stroke-width="8" fill="none"/>
+  <path d="M250 350 A230 230 0 0 1 690 170" stroke="#D96E4A" stroke-width="8" fill="none"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <rect width="1242" height="1660" fill="#FFF9F2"/>
+  <text x="80" y="150" font-size="62" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">你是不是也这样？</text>
+  <text x="80" y="230" font-size="62" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">明明开始了，还是很乱</text>
+  <rect x="80" y="330" width="1080" height="820" rx="48" fill="#FFFFFF" opacity="0.96"/>
+  <text x="150" y="450" font-size="42" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">你可能就卡在这几个地方：</text>
+  <text x="150" y="575" font-size="40" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">教程收藏了很多</text>
+  <text x="150" y="665" font-size="40" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">工具也换了不少</text>
+  <text x="150" y="755" font-size="40" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">看别人工作流很丝滑</text>
+  <rect x="130" y="855" width="980" height="180" rx="34" fill="#FFF2EA"/>
+  <text x="180" y="935" font-size="42" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">但轮到自己：</text>
+  <text x="180" y="995" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">还是只会开聊天框</text>
+  <text x="180" y="1050" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">一到工作里就接不上</text>
+  <text x="80" y="1380" font-size="48" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">不是你没开始</text>
+  <text x="80" y="1460" font-size="52" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46" font-weight="700">是你一直没接进真实工作</text>
+</svg>

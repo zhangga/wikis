@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9F2"/>
+      <stop offset="100%" stop-color="#F1F8F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1242" height="1660" fill="url(#bg)"/>
+  <circle cx="1030" cy="300" r="150" fill="#FFDCCB"/>
+  <circle cx="240" cy="1400" r="120" fill="#DDECEF"/>
+  <text x="80" y="250" font-size="62" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">你不是没跟上</text>
+  <text x="80" y="325" font-size="62" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">你只是还没跑顺</text>
+  <text x="80" y="520" font-size="48" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">先固定一个场景</text>
+  <text x="80" y="620" font-size="40" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#556A70">写周报也好</text>
+  <text x="80" y="680" font-size="40" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#556A70">写文章也好，先跑一条最小闭环</text>
+  <rect x="80" y="860" width="1080" height="260" rx="44" fill="#FFFFFF" opacity="0.96"/>
+  <text x="135" y="960" font-size="50" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">先把一件小事做顺</text>
+  <text x="135" y="1040" font-size="54" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46" font-weight="700">比研究 10 个新工具更重要</text>
+  <rect x="80" y="1300" width="520" height="82" rx="41" fill="#FF7A59"/>
+  <text x="146" y="1354" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#FFFFFF" font-weight="700">评论区说说：你卡在哪一步？</text>
+</svg>

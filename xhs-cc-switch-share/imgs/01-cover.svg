@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="1660" viewBox="0 0 1242 1660">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9F2"/>
+      <stop offset="100%" stop-color="#F4F9F8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1242" height="1660" fill="url(#bg)"/>
+  <circle cx="980" cy="250" r="150" fill="#FFDCCB"/>
+  <circle cx="1040" cy="1390" r="220" fill="#DDECEF"/>
+  <rect x="82" y="98" width="300" height="60" rx="30" fill="#FF7A59"/>
+  <text x="110" y="138" font-size="26" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#FFFFFF" font-weight="700">普通人先看这 4 个坑</text>
+  <text x="90" y="360" font-size="76" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#193841" font-weight="700">你不是不会用 AI</text>
+  <text x="90" y="500" font-size="92" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#193841" font-weight="700">你只是一直没</text>
+  <text x="90" y="650" font-size="112" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">接成工作流</text>
+  <text x="90" y="855" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#546A70">为什么学了很多 AI</text>
+  <text x="90" y="910" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#546A70">还是越用越乱？</text>
+  <rect x="74" y="1110" width="1090" height="330" rx="42" fill="#FFFFFF" opacity="0.96"/>
+  <text x="125" y="1198" font-size="44" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#E26F4F" font-weight="700">这套卡片适合你</text>
+  <text x="125" y="1280" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">已经开始接触 AI</text>
+  <text x="125" y="1348" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">但总觉得越学越乱</text>
+  <text x="125" y="1416" font-size="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#1F3D46">想把 AI 真正接进工作里</text>
+</svg>

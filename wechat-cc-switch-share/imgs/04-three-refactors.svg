@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#FAF6EF"/>
+  <text x="110" y="110" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">三次重构，本质上是在给增长修路</text>
+  <text x="110" y="160" font-size="26" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#62767C">重构不是返工，而是在降低未来每一次迭代的成本</text>
+
+  <rect x="120" y="250" width="400" height="430" rx="30" fill="#FFFFFF" stroke="#DFE5E4" stroke-width="3"/>
+  <text x="170" y="320" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">01 数据架构重塑</text>
+  <text x="170" y="390" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#4F6268">问题：</text>
+  <text x="260" y="390" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#4F6268">存储分散 难扩展</text>
+  <text x="170" y="450" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#4F6268">动作：</text>
+  <text x="260" y="450" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#4F6268">统一到 JSON</text>
+  <text x="260" y="495" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#4F6268">补迁移与回退</text>
+  <text x="170" y="575" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#9D4E32" font-weight="700">结果：后续云同步等能力才有地基</text>
+
+  <rect x="600" y="220" width="400" height="490" rx="30" fill="#FFF5E7" stroke="#EEDAB2" stroke-width="3"/>
+  <text x="650" y="290" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">02 技术栈迁移</text>
+  <text x="650" y="370" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5E4C2D">安装包</text>
+  <text x="790" y="370" font-size="56" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#D96E4A">100MB → 5MB</text>
+  <text x="650" y="445" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5E4C2D">启动速度</text>
+  <text x="830" y="445" font-size="40" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">明显提升</text>
+  <text x="650" y="540" font-size="28" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5E4C2D">意义：</text>
+  <text x="650" y="590" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5E4C2D">不是 README 里的优势</text>
+  <text x="650" y="635" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#5E4C2D">而是用户第一次打开就能感知的升级</text>
+
+  <rect x="1080" y="250" width="400" height="430" rx="30" fill="#EEF7F6" stroke="#D0E1DE" stroke-width="3"/>
+  <text x="1130" y="320" font-size="34" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-weight="700" fill="#17343B">03 技术债清理</text>
+  <text x="1130" y="395" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#496066">组件化</text>
+  <text x="1130" y="445" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#496066">拆大文件</text>
+  <text x="1130" y="495" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#496066">理顺结构</text>
+  <text x="1130" y="575" font-size="27" font-family="'Microsoft YaHei','PingFang SC',sans-serif" fill="#9D4E32" font-weight="700">目标：半年后自己仍敢继续改</text>
+</svg>
