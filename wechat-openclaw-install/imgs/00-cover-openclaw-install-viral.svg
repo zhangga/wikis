@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <rect width="900" height="383" fill="#F7E6D5"/>
+  <rect x="34" y="30" width="832" height="323" rx="28" fill="#FFF8EF"/>
+  <rect x="60" y="56" width="148" height="36" rx="18" fill="#18392F"/>
+  <text x="81" y="81" font-size="22" font-weight="700" font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#FFF8EF">????</text>
+  <text x="68" y="152" font-size="58" font-weight="800" font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#18392F">???????</text>
+  <text x="68" y="222" font-size="48" font-weight="800" font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#C66532">????????</text>
+  <text x="68" y="278" font-size="28" font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#355B4F">OpenClaw ???????</text>
+  <text x="68" y="316" font-size="28" font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#355B4F">????</text>
+  <rect x="638" y="76" width="168" height="44" rx="22" fill="#F1BC73"/>
+  <text x="677" y="106" font-size="24" font-weight="700" font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#18392F">OpenClaw</text>
+  <rect x="642" y="146" width="156" height="110" rx="24" fill="#18392F"/>
+  <rect x="670" y="170" width="100" height="10" rx="5" fill="#FFF8EF"/>
+  <rect x="670" y="193" width="78" height="10" rx="5" fill="#E7C4A4"/>
+  <rect x="670" y="216" width="90" height="10" rx="5" fill="#E07C45"/>
+  <circle cx="748" cy="282" r="44" fill="#A6C0B2"/>
+  <path d="M730 282 h36" stroke="#FFF8EF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M748 264 v36" stroke="#FFF8EF" stroke-width="10" stroke-linecap="round"/>
+</svg>

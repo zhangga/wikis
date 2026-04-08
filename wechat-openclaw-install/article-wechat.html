@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>别再反复重装 OpenClaw 了，第一次最容易卡住的根本不是安装命令</title>
+</head>
+<body style="margin:0;padding:0;background:#f4efe7;">
+  <article style="max-width:760px;margin:0 auto;padding:32px 20px 56px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.9;color:#2c2c2c;background:#fffdf8;">
+    <h1 style="margin:0 0 24px;font-size:34px;line-height:1.45;color:#18392f;">别再反复重装 OpenClaw 了，第一次最容易卡住的根本不是安装命令</h1>
+
+    <p style="margin:0 0 24px;">
+      <img src="imgs/00-cover-openclaw-install-viral.png" alt="OpenClaw 安装避坑封面图" style="display:block;width:100%;border-radius:18px;" />
+    </p>
+
+    <section style="margin:0 0 30px;padding:20px 22px;border-radius:18px;background:#fff4ea;border:1px solid #f0d5bf;">
+      <p style="margin:0 0 10px;font-size:15px;letter-spacing:1px;color:#c56433;font-weight:700;">导读</p>
+      <p style="margin:0 0 10px;font-size:17px;color:#5b473d;">很多人第一次装 OpenClaw，以为把安装命令跑完就行，结果真正卡住的却是后面的初始化选项和模型配置。</p>
+      <p style="margin:0;font-size:17px;color:#5b473d;">这篇按 Windows 新手视角，把安装、初始化、模型接入和重启验证完整顺了一遍。你可以直接照着做，尽量一次装好，不再反复重装。</p>
+    </section>
+
+    <p style="margin:0 0 18px;font-size:18px;">第一次装这类 AI 编码工具，很多人不是卡在“不会执行命令”，而是卡在“这一步到底该怎么选、跳过会不会有问题、装完后下一步又是什么”。</p>
+    <p style="margin:0 0 18px;font-size:18px;">OpenClaw 也是一样。真正让新手劝退的，往往不是安装脚本本身，而是后面的初始化引导和模型接入。</p>
+
+    <blockquote style="margin:24px 0;padding:18px 20px;border-left:4px solid #c56433;background:#fff6ef;color:#9a4f2b;font-size:20px;font-weight:700;">
+      如果你想把 OpenClaw 一次装好，最省时间的方式不是自己来回试，而是按一条完整路径走完安装、初始化、接入模型和重启验证。
+    </blockquote>
+
+    <p style="margin:0 0 18px;font-size:18px;">这篇文章我按 Windows 新手视角，把整个流程顺一遍。你能直接拿走 3 样东西：</p>
+    <ol style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;">安装命令。</li>
+      <li style="margin:0 0 10px;">初始化时每一步怎么选。</li>
+      <li style="margin:0 0 10px;">接入大模型后，怎么确认 OpenClaw 已经真的跑起来。</li>
+    </ol>
+    <p style="margin:0 0 18px;font-size:18px;">如果你用的是 macOS，也不用慌，安装命令我会一并放上；只是下面的截图和操作路径，主要按 Windows 来写。</p>
+
+    <section style="margin:26px 0;padding:18px 20px;border-radius:16px;background:#eef5f3;">
+      <p style="margin:0;font-size:17px;color:#18392f;"><strong>先说结论：</strong>OpenClaw 真正要走完的是 3 步，先安装，再走初始化，最后接上模型并重启网关确认生效。</p>
+    </section>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18392f;">第一步：先把 OpenClaw 装上</h2>
+    <p style="margin:0 0 18px;font-size:18px;">Windows 下，先用管理员身份打开 PowerShell。</p>
+
+    <p style="margin:24px 0;">
+      <img src="imgs/01-open-powershell-as-admin.png" alt="以管理员身份打开 PowerShell" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 16px;font-size:18px;">然后执行安装命令：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2a28;color:#f6f4ee;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre>
+
+    <p style="margin:0 0 16px;font-size:18px;">如果你用的是 macOS，对应命令是：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2a28;color:#f6f4ee;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></pre>
+
+    <p style="margin:0 0 18px;font-size:18px;">这一步本身并不复杂，真正容易让人犹豫的是后面初始化时那些选项。别急，下面我直接按一条更稳的路径带你走。</p>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18392f;">第二步：初始化时别乱点，按这条路径走更稳</h2>
+    <p style="margin:0 0 16px;font-size:18px;">如果安装完成后已经进入引导，就接着往下走；如果你中途跳过了，或者想重新配置，可以手动执行：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2a28;color:#f6f4ee;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>openclaw onboard --install-daemon</code></pre>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">1. 先确认开始引导</h3>
+    <p style="margin:0 0 18px;font-size:18px;">进入引导后，先选 <strong>Yes</strong>，然后选 <strong>QuickStart</strong>。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/02-onboard-quickstart.png" alt="选择 Yes 和 QuickStart" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">2. 提供商这一步，先按默认思路走</h3>
+    <p style="margin:0 0 16px;font-size:18px;">接下来建议按下面的顺序选：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Skip for now</code></li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">All providers</code></li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Keep current</code></li>
+    </ul>
+    <p style="margin:0 0 18px;font-size:18px;">这条路径的好处是，先把环境跑起来，不在一开始就把自己卡死在太细的配置里。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/03-provider-keep-current.png" alt="先跳过再保留当前配置" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">3. 本地工具和附加项，先别展开</h3>
+    <p style="margin:0 0 18px;font-size:18px;">接下来两步都可以先选 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Skip for now</code>。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/04-skip-local-tools.png" alt="本地工具和附加项先跳过" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">4. 安装 daemon 时确认即可</h3>
+    <p style="margin:0 0 18px;font-size:18px;">这里直接选 <strong>Yes</strong>。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/05-confirm-install-daemon.png" alt="确认安装 daemon" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">5. 遇到多选项时，先把“跳过”走通</h3>
+    <p style="margin:0 0 18px;font-size:18px;">当界面出现多选时，先用空格选中 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Skip for now</code>，然后回车确认。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/06-select-skip-for-now.png" alt="先选中 Skip for now" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">6. API 相关选项，先全走默认的 No</h3>
+    <p style="margin:0 0 18px;font-size:18px;">如果你现在的目标只是先把 OpenClaw 跑起来，这一段不需要一上来就展开，保持默认的 <strong>No</strong> 更省心。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/07-api-options-default-no.png" alt="API 相关选项先保持默认" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">7. hooks 相关的地方，除了跳过项外其余都选上</h3>
+    <p style="margin:0 0 18px;font-size:18px;">这里的经验做法是：除了 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Skip for now</code> 之外，其他项都用空格选中，再回车确认。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/08-hooks-select-all-except-skip.png" alt="hooks 相关选项的选择方式" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">8. 让它打开 Web UI</h3>
+    <p style="margin:0 0 18px;font-size:18px;">接下来选 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Open the Web UI</code>。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/09-open-web-ui.png" alt="选择打开 Web UI" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;">正常情况下，你会进入本地地址：</p>
+    <p style="margin:0 0 18px;font-size:18px;"><code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">http://127.0.0.1:18789/chat?session=main</code></p>
+    <p style="margin:24px 0;">
+      <img src="imgs/10-local-chat-url.png" alt="OpenClaw 的本地访问地址" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;">同时要注意一件事：后台会有一个 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">gateway</code> 进程在运行，这个不要随手关掉。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/11-gateway-running.png" alt="确认 gateway 进程在后台运行" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <section style="margin:26px 0;padding:18px 20px;border-radius:16px;background:#fff6ef;border:1px solid #f0d5bf;">
+      <p style="margin:0;font-size:17px;color:#9a4f2b;"><strong>这里的关键提醒：</strong>走到这里，其实你已经把 OpenClaw 的壳子装好了。但如果还没接上模型，它能打开，不代表它已经好用。</p>
+    </section>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18392f;">第三步：把大模型接上，不然能打开也不算真正装好</h2>
+    <p style="margin:0 0 18px;font-size:18px;">下面这部分，我用原稿里的火山引擎方案举例。你也可以换成自己手头能用的模型提供商，逻辑是一样的：先准备 API Key，再在 OpenClaw 里把模型供应商和默认模型配好。</p>
+    <p style="margin:0 0 16px;font-size:18px;">先准备好 API Key，然后在 PowerShell 里执行：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2a28;color:#f6f4ee;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>openclaw config</code></pre>
+
+    <p style="margin:24px 0;">
+      <img src="imgs/12-openclaw-config-command.png" alt="进入 openclaw config" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">1. 配置入口这样走</h3>
+    <p style="margin:0 0 16px;font-size:18px;">在菜单里依次选择：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Local</code></li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Model</code></li>
+    </ul>
+    <p style="margin:24px 0;">
+      <img src="imgs/13-local-model-menu.png" alt="先进入 Local 和 Model" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">2. 选择模型提供商</h3>
+    <p style="margin:0 0 18px;font-size:18px;">这里按原流程选择 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Volcano Engine</code>。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/14-choose-volcano-engine.png" alt="选择 Volcano Engine" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">3. 准备粘贴 API Key</h3>
+    <p style="margin:0 0 18px;font-size:18px;">当界面提示时，选择 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Paste API key now</code>。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/15-paste-api-key-now.png" alt="选择 Paste API key now" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;">然后把你提前准备好的 API Key 粘贴进去。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/16-input-api-key.png" alt="输入 API Key" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;">确认无误后继续。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/17-confirm-api-key.png" alt="确认 API Key" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">4. 模型名保持默认即可</h3>
+    <p style="margin:0 0 18px;font-size:18px;">如果你也是按这个方案来配，模型名保持默认的 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">volcengine-plan/ark-code-latest</code> 就可以。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/18-default-model-name.png" alt="保持默认模型名" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;">接着选 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">Continue</code> 完成配置。</p>
+    <p style="margin:24px 0;">
+      <img src="imgs/19-finish-model-setup.png" alt="完成模型配置" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18392f;">5. 最后重启一次网关</h3>
+    <p style="margin:0 0 16px;font-size:18px;">为了让配置生效，回到 PowerShell 执行：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2a28;color:#f6f4ee;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>openclaw gateway restart</code></pre>
+
+    <p style="margin:24px 0;">
+      <img src="imgs/20-restart-gateway.png" alt="重启 OpenClaw gateway" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;">到这里，OpenClaw 才算真正完成了从“装上”到“可用”的闭环。</p>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18392f;">装完之后，先用这 3 个动作确认自己没有白忙</h2>
+    <p style="margin:0 0 16px;font-size:18px;">如果你不想装完以后心里还打鼓，可以立刻做这 3 件事：</p>
+    <ol style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 12px;">执行 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">openclaw dashboard</code>，确认主界面能正常打开。</li>
+      <li style="margin:0 0 12px;">访问 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">http://127.0.0.1:18789/chat?session=main</code>，确认本地 Web UI 正常。</li>
+      <li style="margin:0 0 12px;">如果界面异常，先别急着重装，优先执行 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">openclaw gateway restart</code> 再看一次。</li>
+    </ol>
+
+    <section style="margin:26px 0;padding:18px 20px;border-radius:16px;background:#eef5f3;border:1px solid #d8e5e2;">
+      <p style="margin:0 0 10px;font-size:16px;color:#4b6761;font-weight:700;">两个常用命令</p>
+      <p style="margin:0 0 8px;font-size:17px;color:#2c2c2c;">重启网关：<code style="padding:2px 6px;border-radius:6px;background:#ffffff;">openclaw gateway restart</code></p>
+      <p style="margin:0;font-size:17px;color:#2c2c2c;">打开主界面：<code style="padding:2px 6px;border-radius:6px;background:#ffffff;">openclaw dashboard</code></p>
+    </section>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18392f;">最后，把这篇教程压缩成一句话和一个动作清单</h2>
+    <p style="margin:0 0 18px;font-size:18px;">如果你想把这篇文章转给朋友，我觉得最值得被转述的一句判断是：</p>
+
+    <blockquote style="margin:24px 0;padding:18px 20px;border-left:4px solid #18392f;background:#eef5f3;color:#18392f;font-size:20px;font-weight:700;">
+      第一次装 OpenClaw，真正劝退人的往往不是安装命令，而是初始化和模型配置；把这两段走顺，OpenClaw 就不难。
+    </blockquote>
+
+    <p style="margin:0 0 16px;font-size:18px;">如果你只想带走一个最短动作清单，那就是这 4 步：</p>
+    <ol style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 12px;">管理员 PowerShell 执行安装命令。</li>
+      <li style="margin:0 0 12px;">用 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">openclaw onboard --install-daemon</code> 走完初始化。</li>
+      <li style="margin:0 0 12px;">用 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">openclaw config</code> 接上模型和 API Key。</li>
+      <li style="margin:0 0 12px;">最后执行 <code style="padding:2px 6px;border-radius:6px;background:#f5efe7;">openclaw gateway restart</code> 做一次生效验证。</li>
+    </ol>
+
+    <p style="margin:0 0 18px;font-size:18px;">很多工具看起来门槛高，不是因为它真的复杂，而是因为第一次没人把“该怎么选”讲清楚。</p>
+    <p style="margin:0 0 18px;font-size:18px;">OpenClaw 这类工具尤其如此。只看命令，你会觉得很简单；真正自己装时，最需要的是一条有人走通过的路径。</p>
+
+    <section style="margin:34px 0 0;padding:22px 24px;border-radius:18px;background:#18392f;">
+      <p style="margin:0 0 10px;font-size:20px;line-height:1.8;font-weight:700;color:#f7f4ec;">最后想说</p>
+      <p style="margin:0;font-size:17px;line-height:1.9;color:#e7efec;">如果你正准备第一次上手，希望这篇能帮你少走一点弯路，直接把 OpenClaw 跑起来。</p>
+    </section>
+  </article>
+</body>
+</html>
