@@ -1,0 +1,68 @@
+{
+  "jobs": 3,
+  "tasks": [
+    {
+      "id": "cover",
+      "promptFiles": ["prompts/01-cover.md"],
+      "image": "imgs/01-cover-kids-ai-boundaries.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "already-here",
+      "promptFiles": ["prompts/02-ai-is-already-here.md"],
+      "image": "imgs/02-ai-is-already-here.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "extremes",
+      "promptFiles": ["prompts/03-two-extremes.md"],
+      "image": "imgs/03-two-extremes.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "privacy",
+      "promptFiles": ["prompts/04-no-private-data.md"],
+      "image": "imgs/04-no-private-data.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "answer",
+      "promptFiles": ["prompts/05-not-final-answer.md"],
+      "image": "imgs/05-not-final-answer.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "review",
+      "promptFiles": ["prompts/06-review-before-submit.md"],
+      "image": "imgs/06-review-before-submit.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "visible-use",
+      "promptFiles": ["prompts/07-visible-use.md"],
+      "image": "imgs/07-visible-use.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "speak-up",
+      "promptFiles": ["prompts/08-say-it-early.md"],
+      "image": "imgs/08-say-it-early.png",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "closing",
+      "promptFiles": ["prompts/09-boundaries-matter-more.md"],
+      "image": "imgs/09-boundaries-matter-more.png",
+      "ar": "3:4",
+      "quality": "2k"
+    }
+  ]
+}
