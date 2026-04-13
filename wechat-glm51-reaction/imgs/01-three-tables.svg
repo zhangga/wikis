@@ -1,0 +1,35 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F6F2EA"/>
+  <rect x="44" y="44" width="1112" height="632" rx="28" fill="#FFFDF8" stroke="#D8CFC0" stroke-width="2"/>
+  <text x="84" y="118" fill="#16202A" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="44" font-weight="700">看 GLM-5.1 这次反响，不要只看榜单</text>
+  <text x="84" y="164" fill="#6A7682" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24">更值得同时看的，是热度表、定价表、交付表</text>
+
+  <rect x="84" y="220" width="320" height="360" rx="24" fill="#16202A"/>
+  <text x="116" y="278" fill="#FFB14A" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="30" font-weight="700">01 热度表</text>
+  <text x="116" y="332" fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26">看谁在转、谁在写、</text>
+  <text x="116" y="370" fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26">谁在讨论。</text>
+  <text x="116" y="428" fill="#C7D0D8" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">它告诉你：</text>
+  <text x="116" y="462" fill="#C7D0D8" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">有没有形成行业叙事，</text>
+  <text x="116" y="496" fill="#C7D0D8" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">是不是从发布会</text>
+  <text x="116" y="530" fill="#C7D0D8" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">走进了更大的讨论场。</text>
+
+  <rect x="440" y="220" width="320" height="360" rx="24" fill="#FFB14A"/>
+  <text x="472" y="278" fill="#16202A" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="30" font-weight="700">02 定价表</text>
+  <text x="472" y="332" fill="#16202A" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26">看它在降价抢量，</text>
+  <text x="472" y="370" fill="#16202A" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26">还是提价试探。</text>
+  <text x="472" y="428" fill="#4B3A16" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">它告诉你：</text>
+  <text x="472" y="462" fill="#4B3A16" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">公司自己到底把它</text>
+  <text x="472" y="496" fill="#4B3A16" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">当流量产品，还是</text>
+  <text x="472" y="530" fill="#4B3A16" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">开始当收入产品。</text>
+
+  <rect x="796" y="220" width="320" height="360" rx="24" fill="#E76F51"/>
+  <text x="828" y="278" fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="30" font-weight="700">03 交付表</text>
+  <text x="828" y="332" fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26">看真实用户愿不愿意</text>
+  <text x="828" y="370" fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26">迁移工作流。</text>
+  <text x="828" y="428" fill="#FFE7E0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">它告诉你：</text>
+  <text x="828" y="462" fill="#FFE7E0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">这模型到底是</text>
+  <text x="828" y="496" fill="#FFE7E0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">“看起来很强”，还是</text>
+  <text x="828" y="530" fill="#FFE7E0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">“真的能持续干活”。</text>
+
+  <text x="84" y="636" fill="#6A7682" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="22">一句话：下一阶段比的，不是谁更会回答，而是谁更像一个能被持续付费的工程劳动力。</text>
+</svg>

@@ -1,0 +1,49 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "asset-vs-consumable",
+      "promptFiles": [
+        "prompts/01-comparison-asset-vs-consumable.md"
+      ],
+      "image": "01-software-from-asset-to-consumable.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "ui-to-agent-skill",
+      "promptFiles": [
+        "prompts/02-flow-agent-skill.md"
+      ],
+      "image": "02-ui-to-agent-skill-flow.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "product-value",
+      "promptFiles": [
+        "prompts/03-framework-product-value.md"
+      ],
+      "image": "03-product-value-in-agent-era.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "middle-layer-collapse",
+      "promptFiles": [
+        "prompts/04-framework-middle-layer.md"
+      ],
+      "image": "04-middle-layer-collapse.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "fallback_jobs": [
+    {
+      "job": {
+        "name": "glm51-cartoon-cover",
+        "output_dir": "C:\\work\\github\\wikis\\xhs-glm51-reaction\\imgs",
+        "filename": "09-cover-cartoon-glm51.png",
+        "prompt_text": "Create a bold cartoon-style cover illustration for a Chinese social media post about the AI model GLM-5.1. Vertical 3:4 composition, optimized for a Xiaohongshu cover. Show a cute but sharp tech scene: an AI engineer or small robot at a coding desk, a glowing giant '8h' symbol attracting attention on one side, and on the other side a dramatic rising price arrow, stacked coins, and a pricing tag to represent price increase and pricing power. The visual message should be: everyone is talking about 8-hour performance, but the real signal is rising pricing power. Use a clean editorial cartoon style, high contrast, strong storytelling, modern AI/tech atmosphere, vivid but not childish, polished lighting, simple readable shapes, no watermark, no logos, no messy background, no extra small text. Leave some clean negative space for possible title overlay. Make it feel punchy, provocative, and suitable as a viral cover image."
+      },
+      "result": {
+        "prompt": "Create a bold cartoon-style cover illustration for a Chinese social media post about the AI model GLM-5.1. Vertical 3:4 composition, optimized for a Xiaohongshu cover. Show a cute but sharp tech scene: an AI engineer or small robot at a coding desk, a glowing giant '8h' symbol attracting attention on one side, and on the other side a dramatic rising price arrow, stacked coins, and a pricing tag to represent price increase and pricing power. The visual message should be: everyone is talking about 8-hour performance, but the real signal is rising pricing power. Use a clean editorial cartoon style, high contrast, strong storytelling, modern AI/tech atmosphere, vivid but not childish, polished lighting, simple readable shapes, no watermark, no logos, no messy background, no extra small text. Leave some clean negative space for possible title overlay. Make it feel punchy, provocative, and suitable as a viral cover image."
+      }
+    }
+  ],
+  "saved_jobs": [],
+  "failed_jobs": []
+}
