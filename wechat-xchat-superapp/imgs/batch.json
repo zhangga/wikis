@@ -1,0 +1,60 @@
+{
+  "jobs": 4,
+  "tasks": [
+    {
+      "id": "cover-xchat-superapp",
+      "promptFiles": [
+        "prompts/00-cover-xchat-superapp.md"
+      ],
+      "image": "00-cover-xchat-superapp.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "xchat-timeline",
+      "promptFiles": [
+        "prompts/01-xchat-timeline.md"
+      ],
+      "image": "01-xchat-timeline.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "superapp-stack",
+      "promptFiles": [
+        "prompts/02-superapp-stack.md"
+      ],
+      "image": "02-superapp-stack.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "promise-vs-friction",
+      "promptFiles": [
+        "prompts/03-promise-vs-friction.md"
+      ],
+      "image": "03-promise-vs-friction.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "three-scoreboards",
+      "promptFiles": [
+        "prompts/04-three-scoreboards.md"
+      ],
+      "image": "04-three-scoreboards.png",
+      "provider": "seedream",
+      "model": "doubao-seedream-5-0-260128",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}
