@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第一次搭 Claude 通道，最容易卡住的不是命令，而是这几步没人讲透</title>
+</head>
+<body style="margin:0;padding:0;background:#eef3f7;">
+  <article style="max-width:760px;margin:0 auto;padding:32px 20px 56px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.9;color:#2c2c2c;background:#fcfeff;">
+    <h1 style="margin:0 0 24px;font-size:34px;line-height:1.45;color:#18384a;">第一次搭 Claude 通道，最容易卡住的不是命令，而是这几步没人讲透</h1>
+
+    <p style="margin:0 0 24px;">
+      <img src="imgs/00-cover-claude-proxy.png" alt="Claude 通道搭建教程封面图" style="display:block;width:100%;border-radius:18px;" />
+    </p>
+
+    <section style="margin:0 0 30px;padding:20px 22px;border-radius:18px;background:#eef7f6;border:1px solid #d2e7e3;">
+      <p style="margin:0 0 10px;font-size:15px;letter-spacing:1px;color:#2d7b70;font-weight:700;">导读</p>
+      <p style="margin:0 0 10px;font-size:17px;color:#47625e;">这不是一篇只给配置片段的帖子，而是一篇按普通用户第一次搭建视角整理的 Claude 通道教程。</p>
+      <p style="margin:0;font-size:17px;color:#47625e;">我会把整条路顺成 5 段：先看方案在做什么，再准备材料，接着搭服务端、连客户端、做验证，最后给你一份最常见问题排查表。</p>
+    </section>
+
+    <p style="margin:0 0 18px;font-size:18px;">很多人现在折腾 Claude 通道，已经不是为了“偶尔试一下”，而是想把 Claude / Claude Code 稳定接进自己的日常工作。</p>
+    <p style="margin:0 0 18px;font-size:18px;">但第一次动手时，真正劝退人的通常不是某一行命令，而是另一件更现实的事：你不知道该先准备什么，不知道整条链路该按什么顺序走，也不知道做到哪一步才算真的成功。</p>
+
+    <blockquote style="margin:24px 0;padding:18px 20px;border-left:4px solid #2d7b70;background:#f2fbfa;color:#2d5e59;font-size:20px;font-weight:700;">
+      第一次搭 Claude 通道，真正难的往往不是命令本身，而是没人把“先做什么、做到哪一步算成功、卡住先查哪里”讲顺。
+    </blockquote>
+
+    <p style="margin:0 0 18px;font-size:18px;">如果你只是低频偶尔用 Claude，这套复杂度未必值得；但如果你已经开始高频依赖它，这篇会帮你把第一次搭建走顺。</p>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">先用一句人话讲清，这套方案到底在做什么</h2>
+
+    <p style="margin:24px 0;">
+      <img src="imgs/01-traffic-path-claude-proxy.png" alt="Claude 通道流量路径图" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;"><strong>你的设备先安全连到一台 AWS 云服务器，再由服务器把 Claude 相关流量单独分给住宅代理，其他流量继续正常直连。</strong></p>
+    <p style="margin:0 0 18px;font-size:18px;">这里面 3 个名字第一次看会有点晕，我先翻译成人话：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code>：负责接住你设备传来的加密流量，像这条通道的大门。</li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code>：负责按规则分流，决定哪些流量要继续转给住宅代理。</li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">住宅代理</code>：给 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Anthropic / Claude</code> 相关请求一个更稳定的出口 IP。</li>
+    </ul>
+    <p style="margin:0 0 18px;font-size:18px;">这套方案和“开一个全局代理就完事”最大的区别是：<strong>它不是把所有流量都塞进同一个黑盒，而是只给 Claude 单独开一条更可控的路。</strong></p>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">动手前，先准备这 4 样东西</h2>
+    <p style="margin:0 0 18px;font-size:18px;">第一次最容易翻车的地方，不是命令，而是材料没准备齐。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">1. 一台 AWS EC2</h3>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;">区域：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">us-west-1</code> 或 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">ap-northeast-1</code></li>
+      <li style="margin:0 0 10px;">系统：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Ubuntu Server 24.04 LTS</code></li>
+      <li style="margin:0 0 10px;">实例：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">t3.micro</code></li>
+      <li style="margin:0 0 10px;">磁盘：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">8-20 GB</code></li>
+    </ul>
+    <p style="margin:0 0 18px;font-size:18px;">你后面要从 AWS 记住 3 个东西：实例公网 IP、SSH 登录方式，以及安全组是否只放行了 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">22</code> 和 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">443</code>。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">2. 一个住宅代理账号</h3>
+    <p style="margin:0 0 18px;font-size:18px;">你至少要提前拿到这 4 项：代理地址、代理端口、用户名、密码。没有这组信息，你后面就算把 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code> 和 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code> 都装好了，也没法让 Anthropic 流量真正出得去。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">3. 一台电脑和至少一台移动设备</h3>
+    <p style="margin:0 0 18px;font-size:18px;">这篇默认按下面的客户端来写：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;">Mac：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Clash Verge Rev</code></li>
+      <li style="margin:0 0 10px;">iPhone：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Hiddify</code></li>
+      <li style="margin:0 0 10px;">Android：<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Hiddify</code> 或 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">v2rayNG</code></li>
+    </ul>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">4. 基本的 SSH 登录能力</h3>
+    <p style="margin:0 0 18px;font-size:18px;">你不用懂 Linux 运维，但至少要能完成两件事：用 SSH 登录 AWS，以及知道怎么复制、粘贴和保存配置文件。如果你连 SSH 都还没登录过，建议先把这一步单独跑通，再继续往下做。</p>
+
+    <section style="margin:26px 0;padding:18px 20px;border-radius:16px;background:#fff7ee;border:1px solid #f1dcc2;">
+      <p style="margin:0;font-size:17px;color:#9d5a32;"><strong>提前提醒：</strong><code style="padding:2px 6px;border-radius:6px;background:#fffdf8;">7890</code> 不需要开放到公网，它只给服务器本机上的 <code style="padding:2px 6px;border-radius:6px;background:#fffdf8;">Xray -&gt; mihomo</code> 转发使用。</p>
+    </section>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第一步：先把 AWS 实例和安全组准备好</h2>
+
+    <table style="width:100%;border-collapse:collapse;margin:0 0 20px;font-size:17px;">
+      <thead>
+        <tr>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">配置项</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">推荐值</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">区域</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>us-west-1</code> 或 <code>ap-northeast-1</code></td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">镜像</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>Ubuntu Server 24.04 LTS</code></td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">机型</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>t3.micro</code></td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">存储</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>8-20 GB gp3</code></td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin:0 0 16px;font-size:18px;">安全组只保留两条最关键的规则：</p>
+    <table style="width:100%;border-collapse:collapse;margin:0 0 20px;font-size:17px;">
+      <thead>
+        <tr>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">类型</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">协议</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">端口</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">来源</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">用途</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">SSH</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">TCP</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">22</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">My IP</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">远程登录</td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">Custom TCP</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">TCP</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">443</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>0.0.0.0/0</code></td><td style="padding:12px 14px;border:1px solid #d8e5ec;">Xray 入站</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin:0 0 16px;font-size:18px;">实例创建好之后，再给它绑定一个弹性 IP。后面文章里的 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">&lt;你的公网IP&gt;</code>，都指这个地址。</p>
+    <p style="margin:0 0 16px;font-size:18px;">然后用 SSH 登录：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>ssh -i your-key.pem ubuntu@&lt;你的公网IP&gt;
+sudo apt update && sudo apt upgrade -y</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">如果这一步能正常进服务器，说明你后面的服务端搭建就可以开始了。</p>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第二步：先装 Xray，让设备先有一条安全入口</h2>
+    <p style="margin:0 0 16px;font-size:18px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code> 的任务很简单：让你的电脑或手机，先能通过 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">443</code> 端口安全连进这台 VPS。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">1. 安装 Xray</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>bash &lt;(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)
+sudo setcap cap_net_bind_service=+ep /usr/local/bin/xray</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">第二行是在给它低端口权限。没有这一步，后面 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">443</code> 很可能起不来。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">2. 生成这 3 组关键信息</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code># 生成 UUID
+xray uuid
+
+# 生成 Reality 密钥对
+xray x25519
+
+# 生成 Short ID
+openssl rand -hex 8</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">把下面这些值单独记下来，后面还会反复用：UUID、Private Key、Public Key、Short ID。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">3. 写入 Xray 配置</h3>
+    <p style="margin:0 0 16px;font-size:18px;">打开配置文件：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>sudo nano /usr/local/etc/xray/config.json</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">然后把主稿里的 JSON 配置粘进去，再把占位符替换成你自己的值。你只需要先看懂两件事：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">443</code> 是设备连进来的入口。</li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Anthropic / Claude</code> 相关域名会被转给 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">127.0.0.1:7890</code>，也就是稍后要安装的 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code>。</li>
+    </ul>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第三步：再装 mihomo，让 Claude 相关流量单独走住宅代理</h2>
+    <p style="margin:0 0 16px;font-size:18px;">如果说 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code> 是入口，那么 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code> 就是分流器。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">1. 安装 mihomo</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>cd /tmp
+wget -O mihomo-linux-amd64.gz https://github.com/MetaCubeX/mihomo/releases/download/v1.19.24/mihomo-linux-amd64-v1-v1.19.24.gz
+gunzip -f mihomo-linux-amd64.gz
+chmod +x mihomo-linux-amd64
+sudo mv mihomo-linux-amd64 /usr/local/bin/mihomo
+
+sudo mkdir -p /etc/mihomo /var/log/mihomo
+sudo wget -O /etc/mihomo/Country.mmdb https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+
+mihomo -v</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">如果最后一行能正常输出版本号，说明它已经装上了。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">2. 写入 mihomo 配置</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>sudo nano /etc/mihomo/config.yaml</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">粘贴主稿里的 YAML 配置，再把住宅代理地址、端口、用户名和密码替换掉。这里最重要的其实只有两件事：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">7890</code> 只监听本地，不暴露公网。</li>
+      <li style="margin:0 0 10px;">只有 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Anthropic / Claude</code> 相关流量走 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">PROXY</code>，其他流量走 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">DIRECT</code>。</li>
+    </ul>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">3. 给 mihomo 建 systemd 服务</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>sudo tee /etc/systemd/system/mihomo.service &lt;&lt; 'EOF'
+[Unit]
+Description=mihomo Proxy
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mihomo -d /etc/mihomo
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable mihomo</code></pre>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第四步：按顺序启动服务，不要反过来</h2>
+
+    <p style="margin:24px 0;">
+      <img src="imgs/02-setup-flow-claude-proxy.png" alt="Claude 通道搭建顺序图" style="display:block;width:100%;border-radius:16px;" />
+    </p>
+
+    <p style="margin:0 0 18px;font-size:18px;"><strong>必须先启动 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code>，再启动 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code>。</strong></p>
+    <p style="margin:0 0 16px;font-size:18px;">因为 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code> 的出站流量要转给 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">7890</code>，如果 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code> 还没起来，<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code> 就会找不到出口。</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>sudo systemctl start mihomo
+sleep 2
+sudo ss -tlnp | grep 7890
+
+sudo systemctl restart xray
+sudo ss -tlnp | grep 443</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">你要看到的成功信号是：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">7890</code> 监听在 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">127.0.0.1</code></li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">443</code> 监听在 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">0.0.0.0</code></li>
+    </ul>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第五步：生成客户端入口，再把各端设备接上</h2>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">1. 先拿到通用的 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">vless://</code> 链接</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>vless://&lt;UUID&gt;@&lt;你的公网IP&gt;:443?encryption=none&amp;flow=xtls-rprx-vision&amp;security=reality&amp;sni=www.apple.com&amp;fp=chrome&amp;pbk=&lt;Public Key&gt;&amp;sid=&lt;Short ID&gt;&amp;type=tcp#AWS-Xray</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">如果你没记 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Public Key</code>，可以用下面这条命令重新算一次：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>xray x25519 -i "&lt;你的Private Key&gt;"</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">这条 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">vless://</code> 链接很重要，后面手机和平板基本都可以直接导入它。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">2. Mac：Clash Verge Rev</h3>
+    <p style="margin:0 0 16px;font-size:18px;">下载地址：</p>
+    <p style="margin:0 0 18px;font-size:18px;"><a href="https://github.com/clash-verge-rev/clash-verge-rev/releases" style="color:#2b6cb0;">https://github.com/clash-verge-rev/clash-verge-rev/releases</a></p>
+    <p style="margin:0 0 18px;font-size:18px;">如果你想先测通，最短路径是新建一个本地 Profile，把主稿里的最小 YAML 配置写进去，然后打开：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Profiles</code> 里选中这个配置</li>
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">System Proxy</code></li>
+    </ul>
+    <p style="margin:0 0 18px;font-size:18px;">如果你要让本机终端里的 Claude Code 也走这条路，再加上：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>export http_proxy="http://127.0.0.1:7890"
+export https_proxy="http://127.0.0.1:7890"</code></pre>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">3. iPhone：Hiddify</h3>
+    <ol style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 12px;">App Store 安装 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Hiddify</code></li>
+      <li style="margin:0 0 12px;">点 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">+</code></li>
+      <li style="margin:0 0 12px;">粘贴刚才那条 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">vless://</code> 链接</li>
+      <li style="margin:0 0 12px;">保存并连接</li>
+    </ol>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">4. Android：Hiddify 或 v2rayNG</h3>
+    <ol style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 12px;">安装客户端</li>
+      <li style="margin:0 0 12px;">选择从剪贴板导入</li>
+      <li style="margin:0 0 12px;">粘贴 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">vless://</code> 链接</li>
+      <li style="margin:0 0 12px;">保存并连接</li>
+    </ol>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第六步：别急着上 Claude，先做这 3 个验证</h2>
+    <p style="margin:0 0 18px;font-size:18px;">第一次搭这类链路，最容易浪费时间的事，就是“看起来差不多好了”，然后直接去用，结果一旦出问题又不知道是哪里错了。正确做法是：先把验证跑完。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">验证 1：确认 mihomo 本身能走住宅代理</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>curl -x socks5h://127.0.0.1:7890 https://ifconfig.me</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">正常结果：返回的应该是住宅代理 IP，不是 AWS 那台 VPS 的公网 IP。如果这里就不对，先别看客户端，说明问题还在 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code> 或住宅代理本身。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">验证 2：确认设备连上 Xray 后，普通流量走 VPS</h3>
+    <p style="margin:0 0 18px;font-size:18px;">当你用电脑或手机连上这条通道后，去访问 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">ip.sb</code> 或 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">ipinfo.io</code>。正常结果是普通流量看到的是 VPS 公网 IP，这说明客户端到 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">Xray</code> 这一段已经正常了。</p>
+
+    <h3 style="margin:30px 0 14px;font-size:22px;line-height:1.6;color:#18384a;">验证 3：确认 Anthropic 流量真的被分给了住宅代理</h3>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>sudo journalctl -u mihomo -f --no-pager</code></pre>
+    <p style="margin:0 0 16px;font-size:18px;">再从客户端或本机代理环境里访问：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>curl https://api.anthropic.com</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">正常结果：</p>
+    <ul style="margin:0 0 18px 24px;padding:0;font-size:18px;">
+      <li style="margin:0 0 10px;"><code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">mihomo</code> 日志里能看到 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">anthropic.com</code> 命中 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">PROXY</code></li>
+      <li style="margin:0 0 10px;">返回可以是 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">200</code>、<code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">404</code>，但不要是 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">403</code> 或 <code style="padding:2px 6px;border-radius:6px;background:#edf4f8;">451</code></li>
+    </ul>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">第七步：第一次最容易卡住的 5 个地方</h2>
+    <table style="width:100%;border-collapse:collapse;margin:0 0 20px;font-size:17px;">
+      <thead>
+        <tr>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">问题</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">最优先检查点</th>
+          <th style="padding:12px 14px;border:1px solid #d8e5ec;background:#edf4f8;color:#18384a;text-align:left;">对应动作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>443</code> 没监听</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>Xray</code> 没起起来，或没给低端口权限</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>sudo setcap cap_net_bind_service=+ep /usr/local/bin/xray &amp;&amp; sudo systemctl restart xray</code></td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>7890</code> 没监听</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>mihomo</code> 配置有误或服务没启动</td><td style="padding:12px 14px;border:1px solid #d8e5ec;"><code>sudo systemctl status mihomo</code></td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">Google 能开，Anthropic 不通</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">住宅代理没有生效</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">先测 <code>curl -x socks5h://127.0.0.1:7890 https://ifconfig.me</code></td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">Anthropic 返回 <code>403</code> / <code>451</code></td><td style="padding:12px 14px;border:1px solid #d8e5ec;">出口 IP 质量不够</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">更换住宅代理 IP 或供应商</td></tr>
+        <tr><td style="padding:12px 14px;border:1px solid #d8e5ec;">客户端导入后连不上</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">公钥、Short ID、UUID 填错</td><td style="padding:12px 14px;border:1px solid #d8e5ec;">重新核对 <code>Public Key</code>、<code>Short ID</code>、<code>UUID</code></td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin:0 0 16px;font-size:18px;">如果你需要看实时日志，优先记住这两条：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>sudo journalctl -u xray -f --no-pager
+sudo journalctl -u mihomo -f --no-pager</code></pre>
+
+    <h2 style="margin:40px 0 18px;font-size:28px;line-height:1.5;color:#18384a;">最后，把维护动作也一起记下来</h2>
+    <p style="margin:0 0 16px;font-size:18px;">真正让人省心的，不是第一次装上，而是后面你知道怎么维护。</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code># 启动
+sudo systemctl start mihomo
+sudo systemctl start xray
+
+# 停止
+sudo systemctl stop xray
+sudo systemctl stop mihomo
+
+# 重启
+sudo systemctl restart mihomo
+sudo systemctl restart xray
+
+# 查看状态
+sudo systemctl status mihomo
+sudo systemctl status xray
+
+# 查看端口
+sudo ss -tlnp | grep -E '443|7890'</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">如果你后面更换了住宅代理，不要直接去试 Claude，先重新跑这一条：</p>
+    <pre style="margin:0 0 20px;padding:18px 20px;border-radius:16px;background:#1f2b31;color:#f4f8fb;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;"><code>curl -x socks5h://127.0.0.1:7890 https://ifconfig.me</code></pre>
+    <p style="margin:0 0 18px;font-size:18px;">确认出口 IP 已经切换成功，再继续往下用。</p>
+
+    <blockquote style="margin:24px 0;padding:18px 20px;border-left:4px solid #d16d46;background:#fff7f2;color:#9a5533;font-size:20px;font-weight:700;">
+      这套方案本质上是在用复杂度换稳定性。如果你只是偶尔问几个问题，它未必值得你折腾；但如果你已经把 Claude / Claude Code 放进了高频工作流，把第一次搭建这件事讲顺，本身就是最有价值的一步。
+    </blockquote>
+  </article>
+</body>
+</html>
