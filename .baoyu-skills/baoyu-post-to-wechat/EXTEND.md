@@ -15,4 +15,3 @@ accounts:
     need_open_comment: 1
     only_fans_can_comment: 0
     app_id: wx69a798ce04241325
-    app_secret: your_wechat_app_secret
