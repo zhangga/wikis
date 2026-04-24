@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07121f"/>
+      <stop offset="52%" stop-color="#102b3d"/>
+      <stop offset="100%" stop-color="#f1b75d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#66e3ff" stop-opacity="0.48"/>
+      <stop offset="100%" stop-color="#66e3ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <style>
+      .font { font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif; }
+      .tag { fill: #dff8ff; font-size: 24px; letter-spacing: 2px; }
+      .title { fill: #fff8e8; font-size: 74px; font-weight: 800; letter-spacing: -1px; }
+      .subtitle { fill: #d8edf2; font-size: 32px; font-weight: 500; }
+      .small { fill: #b8d5dc; font-size: 21px; }
+      .chipText { fill: #092033; font-size: 22px; font-weight: 700; }
+      .chipTextDark { fill: #fff8e8; font-size: 22px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <circle cx="1070" cy="90" r="190" fill="#ffe0a1" opacity="0.22" filter="url(#blur)"/>
+  <circle cx="180" cy="640" r="240" fill="#18b6c8" opacity="0.16" filter="url(#blur)"/>
+  <g opacity="0.16" stroke="#e9fbff" stroke-width="1">
+    <path d="M120 142 C300 84 430 210 612 154 S914 74 1120 170"/>
+    <path d="M90 502 C270 430 470 540 660 438 S950 330 1190 410"/>
+    <path d="M180 250 L360 332 L540 248 L725 336 L930 242 L1110 310"/>
+    <circle cx="180" cy="250" r="6" fill="#e9fbff"/>
+    <circle cx="360" cy="332" r="6" fill="#e9fbff"/>
+    <circle cx="540" cy="248" r="6" fill="#e9fbff"/>
+    <circle cx="725" cy="336" r="6" fill="#e9fbff"/>
+    <circle cx="930" cy="242" r="6" fill="#e9fbff"/>
+    <circle cx="1110" cy="310" r="6" fill="#e9fbff"/>
+  </g>
+  <g transform="translate(88 76)" class="font">
+    <text class="tag" x="0" y="0">AI HOTSPOT DAILY · 2026-04-23</text>
+    <text class="title" x="0" y="118">AI 热点一天之内变了</text>
+    <text class="subtitle" x="2" y="178">8 个话题看懂 Agent 进入企业生产系统</text>
+    <text class="small" x="4" y="236">从聊天框、代码编辑器、办公套件到安全防线，竞争焦点正在换地方。</text>
+  </g>
+  <g class="font" transform="translate(92 395)">
+    <rect x="0" y="0" width="172" height="52" rx="26" fill="#9be8ff"/>
+    <text class="chipText" x="26" y="35">工作入口</text>
+    <rect x="194" y="0" width="172" height="52" rx="26" fill="#f7c86a"/>
+    <text class="chipText" x="220" y="35">模型底座</text>
+    <rect x="388" y="0" width="172" height="52" rx="26" fill="#f15f4a"/>
+    <text class="chipTextDark" x="414" y="35">安全边界</text>
+    <rect x="582" y="0" width="172" height="52" rx="26" fill="#d7e6e8" opacity="0.92"/>
+    <text class="chipText" x="608" y="35">数据回路</text>
+  </g>
+  <g transform="translate(810 382)" class="font">
+    <rect x="0" y="0" width="330" height="176" rx="28" fill="#07121f" opacity="0.62"/>
+    <text x="32" y="54" fill="#fff8e8" font-size="26" font-weight="800">今日判断</text>
+    <text x="32" y="96" fill="#d8edf2" font-size="23">热度不在参数表，</text>
+    <text x="32" y="130" fill="#d8edf2" font-size="23">而在谁能占住工作流、</text>
+    <text x="32" y="164" fill="#d8edf2" font-size="23">治理层和真实操作数据。</text>
+  </g>
+  <text class="font small" x="92" y="654">整理：AI 热点观察 · 来源：OpenAI / Google / Anthropic / AP / Reuters 等公开信息</text>
+</svg>
