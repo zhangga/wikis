@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F4F8FB"/>
+  <text x="96" y="104" font-size="54" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#163447">Claude 通道的搭建顺序</text>
+  <text x="96" y="152" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5E7483">第一次最重要的不是背概念，而是按顺序走：准备 → 服务端 → 客户端 → 验证</text>
+
+  <rect x="96" y="244" width="296" height="460" rx="30" fill="#FFFFFF" stroke="#D9E5EE" stroke-width="3"/>
+  <circle cx="164" cy="320" r="34" fill="#4B7BF5"/>
+  <text x="151" y="332" font-size="34" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="222" y="330" font-size="38" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#163447">准备材料</text>
+  <text x="144" y="404" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">AWS 实例</text>
+  <text x="144" y="456" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">住宅代理账号</text>
+  <text x="144" y="508" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">公网 IP / SSH</text>
+  <text x="144" y="560" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">UUID / 密钥 / Short ID</text>
+  <rect x="134" y="608" width="220" height="62" rx="16" fill="#EEF4FF" stroke="#BDD0F2" stroke-width="2"/>
+  <text x="163" y="648" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#355372">先记全再继续</text>
+
+  <rect x="470" y="188" width="318" height="516" rx="30" fill="#FFFFFF" stroke="#D9E5EE" stroke-width="3"/>
+  <circle cx="538" cy="264" r="34" fill="#2D8A7D"/>
+  <text x="525" y="276" font-size="34" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="598" y="274" font-size="38" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#163447">搭服务端</text>
+  <text x="518" y="350" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">先装 Xray</text>
+  <text x="518" y="402" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">再装 mihomo</text>
+  <text x="518" y="454" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">先起 7890，再起 443</text>
+  <rect x="512" y="512" width="234" height="64" rx="16" fill="#EEF8F7" stroke="#B9E2DC" stroke-width="2"/>
+  <text x="558" y="553" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#24584E">先 mihomo</text>
+  <rect x="512" y="594" width="234" height="64" rx="16" fill="#EEF4FF" stroke="#BDD0F2" stroke-width="2"/>
+  <text x="576" y="635" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#244766">再 Xray</text>
+
+  <rect x="866" y="244" width="296" height="460" rx="30" fill="#FFFFFF" stroke="#D9E5EE" stroke-width="3"/>
+  <circle cx="934" cy="320" r="34" fill="#E07C4A"/>
+  <text x="921" y="332" font-size="34" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="994" y="330" font-size="38" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#163447">连客户端</text>
+  <text x="914" y="404" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">生成 vless 链接</text>
+  <text x="914" y="456" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">Mac 用 Clash Verge Rev</text>
+  <text x="914" y="508" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">手机直接导入链接</text>
+  <rect x="904" y="608" width="220" height="62" rx="16" fill="#FFF1EB" stroke="#F0D2C8" stroke-width="2"/>
+  <text x="940" y="648" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#8A4A32">全设备共用入口</text>
+
+  <rect x="1240" y="188" width="264" height="516" rx="30" fill="#FFFFFF" stroke="#D9E5EE" stroke-width="3"/>
+  <circle cx="1308" cy="264" r="34" fill="#6D57D9"/>
+  <text x="1295" y="276" font-size="34" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="1368" y="274" font-size="38" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" fill="#163447">做验证</text>
+  <text x="1286" y="350" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">看 7890 是否代理成功</text>
+  <text x="1286" y="420" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">看普通流量是否走 VPS</text>
+  <text x="1286" y="490" font-size="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5A7180">看 Anthropic 是否命中 PROXY</text>
+  <rect x="1278" y="586" width="188" height="84" rx="18" fill="#F4EEFF" stroke="#D6C9F7" stroke-width="2"/>
+  <text x="1322" y="636" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5744A5">先验证</text>
+  <text x="1310" y="666" font-size="24" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5744A5">再正式使用</text>
+
+  <path d="M392 474 H470" stroke="#4B7BF5" stroke-width="12" stroke-linecap="round"/>
+  <polygon points="470,474 440,456 440,492" fill="#4B7BF5"/>
+  <path d="M788 474 H866" stroke="#2D8A7D" stroke-width="12" stroke-linecap="round"/>
+  <polygon points="866,474 836,456 836,492" fill="#2D8A7D"/>
+  <path d="M1162 474 H1240" stroke="#E07C4A" stroke-width="12" stroke-linecap="round"/>
+  <polygon points="1240,474 1210,456 1210,492" fill="#E07C4A"/>
+
+  <rect x="96" y="768" width="1408" height="88" rx="22" fill="#FFFFFF" stroke="#D9E5EE" stroke-width="2"/>
+  <text x="132" y="822" font-size="28" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#163447">新手最容易出错的点：</text>
+  <text x="432" y="822" font-size="28" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#516775">一上来先配客户端，或者 Xray / mihomo 启动顺序反了。只要按这 4 段走，排障会轻很多。</text>
+</svg>
