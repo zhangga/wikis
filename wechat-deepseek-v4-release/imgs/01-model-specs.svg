@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071211"/>
+      <stop offset="0.55" stop-color="#0b1c1f"/>
+      <stop offset="1" stop-color="#101314"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#55f0ff"/>
+      <stop offset="1" stop-color="#9dfcff"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e7c46a"/>
+      <stop offset="1" stop-color="#fff0a8"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; fill: #eaf7f6; }
+      .muted { fill: #8da2a4; }
+      .label { fill: #a8f7ff; font-size: 30px; font-weight: 700; }
+      .value { font-size: 64px; font-weight: 800; letter-spacing: 0; }
+      .small { font-size: 26px; }
+      .tiny { font-size: 22px; fill: #8da2a4; }
+      .card { fill: rgba(255,255,255,0.055); stroke: rgba(150,255,255,0.28); stroke-width: 2; rx: 20; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M120 760 C420 610, 590 620, 800 450 C1010 280, 1190 300, 1480 140" fill="none" stroke="#42eaf7" stroke-opacity="0.18" stroke-width="8"/>
+  <path d="M120 780 C420 650, 650 670, 870 520 C1090 370, 1260 360, 1480 240" fill="none" stroke="#e7c46a" stroke-opacity="0.22" stroke-width="5"/>
+  <text x="96" y="105" font-size="54" font-weight="850">DeepSeek V4 模型规格速览</text>
+  <text x="98" y="152" class="small muted">数据来源：DeepSeek API 文档、Hugging Face 模型卡｜2026-04-24</text>
+  <rect x="94" y="220" width="670" height="430" class="card"/>
+  <rect x="836" y="220" width="670" height="430" class="card"/>
+  <text x="142" y="295" font-size="48" font-weight="850" fill="#9dfcff">V4-Flash</text>
+  <text x="884" y="295" font-size="48" font-weight="850" fill="#fff0a8">V4-Pro</text>
+  <text x="142" y="365" class="label">总参数</text>
+  <text x="142" y="435" class="value" fill="url(#cyan)">284B</text>
+  <text x="142" y="505" class="label">激活参数</text>
+  <text x="142" y="575" class="value">13B</text>
+  <text x="884" y="365" class="label" fill="#ffe58a">总参数</text>
+  <text x="884" y="435" class="value" fill="url(#gold)">1.6T</text>
+  <text x="884" y="505" class="label" fill="#ffe58a">激活参数</text>
+  <text x="884" y="575" class="value">49B</text>
+  <rect x="94" y="690" width="1412" height="88" fill="rgba(85,240,255,0.08)" stroke="rgba(85,240,255,0.28)" stroke-width="2" rx="18"/>
+  <text x="142" y="746" font-size="34" font-weight="760">共同能力：1M 上下文｜最大输出 384K｜JSON Output｜Tool Calls｜FIM｜MIT License</text>
+  <text x="98" y="838" class="tiny">注：Flash / Pro 均为 preview release；真实体验仍需社区在长上下文与 Agent 工作流中验证。</text>
+</svg>

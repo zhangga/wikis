@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091414"/>
+      <stop offset="1" stop-color="#171818"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; fill: #edf8f7; }
+      .muted { fill: #94a9aa; }
+      .axis { stroke: rgba(255,255,255,0.22); stroke-width: 2; }
+      .grid { stroke: rgba(255,255,255,0.10); stroke-width: 1; }
+      .flash { fill: #55e8f6; }
+      .pro { fill: #e7c46a; }
+      .label { font-size: 28px; font-weight: 720; }
+      .value { font-size: 26px; font-weight: 780; }
+      .tiny { font-size: 22px; fill: #94a9aa; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="96" y="105" font-size="54" font-weight="850">DeepSeek V4 API 价格对照</text>
+  <text x="98" y="152" font-size="26" class="muted">单位：人民币 / 百万 tokens｜数据来源：DeepSeek API 模型与价格页</text>
+  <line x1="220" y1="690" x2="1430" y2="690" class="axis"/>
+  <line x1="220" y1="250" x2="220" y2="690" class="axis"/>
+  <g class="grid">
+    <line x1="220" y1="598" x2="1430" y2="598"/>
+    <line x1="220" y1="506" x2="1430" y2="506"/>
+    <line x1="220" y1="414" x2="1430" y2="414"/>
+    <line x1="220" y1="322" x2="1430" y2="322"/>
+  </g>
+  <text x="160" y="697" class="tiny">0</text>
+  <text x="148" y="605" class="tiny">6</text>
+  <text x="138" y="513" class="tiny">12</text>
+  <text x="138" y="421" class="tiny">18</text>
+  <text x="138" y="329" class="tiny">24</text>
+  <rect x="370" y="686" width="70" height="4" class="flash"/>
+  <rect x="455" y="674" width="70" height="16" class="pro"/>
+  <text x="350" y="733" class="label">缓存命中输入</text>
+  <text x="364" y="658" class="value">0.2</text>
+  <text x="462" y="646" class="value">1</text>
+  <rect x="740" y="674" width="70" height="16" class="flash"/>
+  <rect x="825" y="506" width="70" height="184" class="pro"/>
+  <text x="714" y="733" class="label">缓存未命中输入</text>
+  <text x="748" y="646" class="value">1</text>
+  <text x="824" y="478" class="value">12</text>
+  <rect x="1110" y="659" width="70" height="31" class="flash"/>
+  <rect x="1195" y="322" width="70" height="368" class="pro"/>
+  <text x="1118" y="733" class="label">输出</text>
+  <text x="1118" y="631" class="value">2</text>
+  <text x="1192" y="294" class="value">24</text>
+  <rect x="1040" y="178" width="28" height="28" class="flash"/>
+  <text x="1080" y="201" class="label">V4-Flash</text>
+  <rect x="1230" y="178" width="28" height="28" class="pro"/>
+  <text x="1270" y="201" class="label">V4-Pro</text>
+  <text x="96" y="820" class="tiny">读图方式：Flash 面向高频吞吐，Pro 面向复杂推理与长程任务。价格不是单点数字，而会影响产品如何调度模型。</text>
+</svg>
