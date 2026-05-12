@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-label="Hand-drawn workflow of Mythos cybersecurity analysis">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.05"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#1f3b3d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" rx="36" fill="#fbf7ed"/>
+  <rect width="1400" height="820" rx="36" fill="#fbf7ed" filter="url(#paper)"/>
+  <path d="M88 116 C308 72 622 84 846 114 C1058 142 1200 116 1312 82" fill="none" stroke="#e9d9bd" stroke-width="12" stroke-linecap="round"/>
+  <text x="90" y="92" font-size="38" font-weight="700" fill="#183b3f">Mythos 把漏洞研究拆成一条可并行流程</text>
+  <text x="92" y="139" font-size="24" fill="#5f6a5f">不是只“看代码”，而是读代码、做实验、验证、交给人修。</text>
+
+  <g fill="#fffdf8" stroke="#1f3b3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M86 244 C90 202 130 188 256 200 C350 209 386 218 382 266 C378 329 324 344 206 340 C112 336 78 314 86 244Z"/>
+    <path d="M420 238 C426 202 464 191 584 199 C687 206 724 226 716 282 C709 333 666 350 544 342 C447 336 412 307 420 238Z"/>
+    <path d="M752 238 C763 201 804 191 920 200 C1025 208 1066 230 1054 288 C1043 339 1004 350 878 342 C784 336 740 304 752 238Z"/>
+    <path d="M1086 236 C1099 202 1136 190 1258 200 C1350 208 1384 235 1370 291 C1358 338 1315 350 1194 342 C1100 336 1070 301 1086 236Z"/>
+  </g>
+
+  <g font-size="28" font-weight="700" fill="#183b3f" text-anchor="middle">
+    <text x="234" y="269">读代码</text>
+    <text x="568" y="269">提假设</text>
+    <text x="904" y="269">跑实验</text>
+    <text x="1228" y="269">交报告</text>
+  </g>
+  <g font-size="20" fill="#61706b" text-anchor="middle">
+    <text x="234" y="304">源码 + 依赖 + 调用链</text>
+    <text x="568" y="304">风险排序 / 并行探索</text>
+    <text x="904" y="304">验证 crash 与边界条件</text>
+    <text x="1228" y="304">复现步骤 + 修复线索</text>
+  </g>
+  <g fill="none" stroke="#1f3b3d" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M386 270 C394 268 404 268 414 270"/>
+    <path d="M718 270 C726 268 738 268 748 270"/>
+    <path d="M1058 270 C1068 268 1076 268 1084 270"/>
+  </g>
+
+  <g transform="translate(150 470)">
+    <path d="M0 0 C178 -28 348 -26 520 8 C688 41 822 48 1088 6" fill="none" stroke="#74b6aa" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="8" cy="0" r="12" fill="#74b6aa"/>
+    <circle cx="520" cy="8" r="12" fill="#f2bd63"/>
+    <circle cx="1088" cy="6" r="12" fill="#74b6aa"/>
+    <text x="0" y="64" font-size="26" font-weight="700" fill="#183b3f">关键变化</text>
+    <text x="0" y="108" font-size="24" fill="#34494a">以前靠少数专家深挖；现在模型可以批量探索，再让人类做最后确认。</text>
+  </g>
+
+  <g fill="none" stroke="#e7ad51" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <path d="M126 604 C162 570 202 568 236 606"/>
+    <path d="M1208 604 C1242 570 1286 572 1318 608"/>
+    <path d="M640 612 C681 574 724 574 764 612"/>
+  </g>
+</svg>

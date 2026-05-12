@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-label="Hand-drawn Project Glasswing defensive alliance">
+  <defs>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#203b3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" rx="36" fill="#fff9ef"/>
+  <path d="M92 116 C320 76 595 86 818 110 C1058 138 1196 116 1304 88" fill="none" stroke="#ead8bd" stroke-width="13" stroke-linecap="round"/>
+  <text x="88" y="92" font-size="40" font-weight="700" fill="#183b3f">Project Glasswing：先让防守方形成网络</text>
+  <text x="90" y="140" font-size="24" fill="#66716a">不是直接开放模型，而是把能力先放进关键软件与开源生态。</text>
+
+  <g transform="translate(700 410)">
+    <path d="M0 -150 C44 -76 44 -10 0 110 C-44 -10 -44 -76 0 -150Z" fill="#dff8f1" stroke="#203b3f" stroke-width="4"/>
+    <path d="M-28 -88 C-108 -170 -240 -190 -366 -142 C-300 -128 -230 -78 -174 -16 C-126 36 -76 64 -24 40 C-12 -2 -12 -46 -28 -88Z" fill="#eaf8f4" stroke="#203b3f" stroke-width="4"/>
+    <path d="M28 -88 C108 -170 240 -190 366 -142 C300 -128 230 -78 174 -16 C126 36 76 64 24 40 C12 -2 12 -46 28 -88Z" fill="#f7ead0" stroke="#203b3f" stroke-width="4"/>
+    <path d="M-22 24 C-110 88 -214 108 -330 76 C-254 132 -112 160 -22 76Z" fill="#f7ead0" stroke="#203b3f" stroke-width="4"/>
+    <path d="M22 24 C110 88 214 108 330 76 C254 132 112 160 22 76Z" fill="#eaf8f4" stroke="#203b3f" stroke-width="4"/>
+  </g>
+
+  <g fill="#fffdf8" stroke="#203b3f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M102 280 C112 230 156 214 252 226 C334 236 360 262 342 314 C326 362 268 366 178 352 C118 342 92 324 102 280Z"/>
+    <path d="M108 530 C116 482 158 466 264 478 C348 488 376 516 356 570 C338 616 276 622 184 606 C122 596 98 574 108 530Z"/>
+    <path d="M1048 278 C1062 230 1106 216 1206 228 C1290 238 1322 268 1300 322 C1284 368 1220 370 1128 354 C1066 344 1038 324 1048 278Z"/>
+    <path d="M1048 532 C1058 484 1104 466 1208 480 C1292 492 1324 522 1302 574 C1280 620 1220 622 1128 606 C1068 596 1036 576 1048 532Z"/>
+  </g>
+
+  <g font-size="26" font-weight="700" fill="#183b3f" text-anchor="middle">
+    <text x="222" y="288">云平台</text>
+    <text x="232" y="538">开源项目</text>
+    <text x="1180" y="288">操作系统</text>
+    <text x="1182" y="540">安全团队</text>
+  </g>
+  <g fill="none" stroke="#203b3f" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow2)" opacity="0.75">
+    <path d="M350 300 C450 280 510 286 580 336"/>
+    <path d="M360 548 C468 554 538 520 602 474"/>
+    <path d="M1048 304 C944 282 878 292 810 336"/>
+    <path d="M1048 548 C946 556 870 516 800 474"/>
+  </g>
+
+  <g transform="translate(410 662)">
+    <path d="M0 0 C150 -30 352 -28 582 0" fill="none" stroke="#74b6aa" stroke-width="6" stroke-linecap="round"/>
+    <text x="0" y="56" font-size="24" fill="#34494a">模型越接近攻击能力，越需要先让防守方建立协作速度。</text>
+  </g>
+</svg>
