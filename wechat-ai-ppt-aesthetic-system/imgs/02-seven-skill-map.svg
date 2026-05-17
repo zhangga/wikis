@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f3e8"/>
+      <stop offset="0.55" stop-color="#eef5f1"/>
+      <stop offset="1" stop-color="#f2edf7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#24302f" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; }
+      .title { font-size: 62px; font-weight: 800; letter-spacing: 0; fill: #162322; }
+      .sub { font-size: 30px; fill: #53635f; }
+      .name { font-size: 30px; font-weight: 800; fill: #172221; }
+      .desc { font-size: 23px; fill: #4e5c59; }
+      .nameLight { font-size: 30px; font-weight: 800; fill: #f7fbf8; }
+      .descLight { font-size: 23px; fill: #d9e5e1; }
+      .tag { font-size: 22px; font-weight: 700; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1440" cy="80" r="170" fill="#39cbb5" opacity="0.16"/>
+  <circle cx="85" cy="790" r="210" fill="#f3a24d" opacity="0.16"/>
+
+  <text x="94" y="110" class="sans title">7 个 PPT Skill，其实是 7 种工作流</text>
+  <text x="98" y="162" class="sans sub">别按热度安装，按你要交付的场景选择</text>
+
+  <g transform="translate(90 235)" filter="url(#shadow)">
+    <rect width="410" height="170" rx="18" fill="#ffffff"/>
+    <rect x="28" y="26" width="116" height="38" rx="19" fill="#178f7c"/>
+    <text x="86" y="53" text-anchor="middle" class="sans tag">快速出片</text>
+    <text x="30" y="104" class="sans name">frontend-slides</text>
+    <text x="30" y="145" class="sans desc">先看 3 个视觉方向，再生成完整 deck</text>
+  </g>
+
+  <g transform="translate(595 235)" filter="url(#shadow)">
+    <rect width="410" height="170" rx="18" fill="#ffffff"/>
+    <rect x="28" y="26" width="116" height="38" rx="19" fill="#e27c32"/>
+    <text x="86" y="53" text-anchor="middle" class="sans tag">多格式交付</text>
+    <text x="30" y="104" class="sans name">huashu-design</text>
+    <text x="30" y="145" class="sans desc">HTML、PPTX、MP4、原型放进同一流程</text>
+  </g>
+
+  <g transform="translate(1100 235)" filter="url(#shadow)">
+    <rect width="410" height="170" rx="18" fill="#ffffff"/>
+    <rect x="28" y="26" width="116" height="38" rx="19" fill="#6b62c7"/>
+    <text x="86" y="53" text-anchor="middle" class="sans tag">个人风格</text>
+    <text x="30" y="104" class="sans name">guizang-ppt-skill</text>
+    <text x="30" y="145" class="sans desc">杂志风、瑞士风、强约束的网页 PPT</text>
+  </g>
+
+  <g transform="translate(90 470)" filter="url(#shadow)">
+    <rect width="410" height="170" rx="18" fill="#ffffff"/>
+    <rect x="28" y="26" width="116" height="38" rx="19" fill="#243a59"/>
+    <text x="86" y="53" text-anchor="middle" class="sans tag">反复修改</text>
+    <text x="30" y="104" class="sans name">open-slide</text>
+    <text x="30" y="145" class="sans desc">浏览器里点选批注，Agent 再应用修改</text>
+  </g>
+
+  <g transform="translate(595 470)" filter="url(#shadow)">
+    <rect width="410" height="170" rx="18" fill="#ffffff"/>
+    <rect x="28" y="26" width="116" height="38" rx="19" fill="#c74d4d"/>
+    <text x="86" y="53" text-anchor="middle" class="sans tag">模板密度</text>
+    <text x="30" y="104" class="sans name">html-ppt-skill</text>
+    <text x="30" y="145" class="sans desc">主题、布局、动画、演讲者模式都打包好</text>
+  </g>
+
+  <g transform="translate(1100 470)" filter="url(#shadow)">
+    <rect width="410" height="170" rx="18" fill="#ffffff"/>
+    <rect x="28" y="26" width="116" height="38" rx="19" fill="#2f8fb8"/>
+    <text x="86" y="53" text-anchor="middle" class="sans tag">批量复用</text>
+    <text x="30" y="104" class="sans name">beautiful-html-templates</text>
+    <text x="30" y="145" class="sans desc">让 Agent 自动按内容挑模板并填充</text>
+  </g>
+
+  <g transform="translate(344 700)" filter="url(#shadow)">
+    <rect width="912" height="104" rx="18" fill="#162322"/>
+    <rect x="30" y="30" width="120" height="44" rx="22" fill="#39cbb5"/>
+    <text x="90" y="60" text-anchor="middle" class="sans tag">完整系统</text>
+    <text x="182" y="62" class="sans nameLight">open-design</text>
+    <text x="390" y="62" class="sans descLight">不只是 PPT，而是本地优先的设计与交付工作流</text>
+  </g>
+</svg>
