@@ -1,0 +1,40 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "00-cover-ai-life-opportunity",
+      "prompt": "Wide editorial cover for a Chinese WeChat article about ordinary developers turning real-life needs into AI products. A developer's desk blends with a warm everyday street scene; a smartphone camera transforms simple objects like a street sign, a mug, a notebook, and a transit card into floating glowing sticker cards. Visual metaphor of AI opportunity emerging from ordinary life. Leave clean negative space for article title overlay, modern lifestyle technology infographic, bright soft gradients, glassmorphism UI, tactile sticker-like elements, subtle 3D mixed with flat illustration, warm and optimistic, no readable text, no logos, no brand marks, no dark cyberpunk, no hand-drawn texture.",
+      "image": "imgs/00-cover-ai-life-opportunity.png",
+      "size": "2560x1440",
+      "quality": "normal"
+    },
+    {
+      "id": "01-life-moment-to-product",
+      "prompt": "Conceptual storyboard-style editorial illustration showing a real-life moment becoming an AI product: a parent and child looking at a street sign, then a phone camera recognizes the object, removes the background, and turns it into a friendly interactive learning sticker with sound waves and review cards. Use four connected visual panels without readable text. Modern lifestyle technology infographic, bright soft gradients, glassmorphism UI, tactile sticker-like elements, warm human feeling, no logos, no brand marks, no dark cyberpunk, no hand-drawn texture.",
+      "image": "imgs/01-life-moment-to-product.png",
+      "size": "2560x1440",
+      "quality": "normal"
+    },
+    {
+      "id": "02-opportunity-map",
+      "prompt": "Editorial infographic showing the opportunity map for ordinary developers in the AI era. In the center, a small developer workspace; around it, four visual zones: daily friction, AI capability blocks, polished user experience, and recurring feedback loop. Use icons and abstract UI cards instead of text. Bright clean composition, soft gradient background, glass panels, colorful but restrained accents, high-end Chinese tech media style, no readable text, no logos, no brand marks, no dark cyberpunk, no hand-drawn texture.",
+      "image": "imgs/02-opportunity-map.png",
+      "size": "2560x1440",
+      "quality": "normal"
+    },
+    {
+      "id": "03-ai-product-loop",
+      "prompt": "Conceptual product loop illustration: real need enters from the left, AI perception and transformation happens in the middle as modular glowing blocks, then a delightful low-friction user experience appears on a phone, ending with a recurring feedback and retention loop. Show arrows as abstract shapes but avoid readable labels. Modern product strategy infographic, bright soft gradients, glassmorphism, sticker-like UI objects, crisp and clean, no readable text, no logos, no brand marks, no dark cyberpunk, no hand-drawn texture.",
+      "image": "imgs/03-ai-product-loop.png",
+      "size": "2560x1440",
+      "quality": "normal"
+    },
+    {
+      "id": "04-seven-day-prototype",
+      "prompt": "Editorial illustration of a seven-day AI prototype sprint for an ordinary developer. A clean weekly calendar, sticky-note idea list, simple code editor, phone prototype, small user feedback cards, and a public demo post all connected in a light workflow. Make it practical and optimistic, modern lifestyle technology infographic, soft gradients, glassmorphism UI, balanced composition, no readable text, no logos, no brand marks, no dark cyberpunk, no hand-drawn texture.",
+      "image": "imgs/04-seven-day-prototype.png",
+      "size": "2560x1440",
+      "quality": "normal"
+    }
+  ]
+}

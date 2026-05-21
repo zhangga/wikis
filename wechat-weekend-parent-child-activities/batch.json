@@ -1,0 +1,41 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "00-cover",
+      "promptFiles": ["prompts/00-cover-weekend-parent-child.md"],
+      "image": "imgs/00-cover-weekend-parent-child.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "01-rhythm",
+      "promptFiles": ["prompts/01-weekend-rhythm.md"],
+      "image": "imgs/01-weekend-rhythm.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "02-menu",
+      "promptFiles": ["prompts/02-activity-menu.md"],
+      "image": "imgs/02-activity-menu.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "03-conversation",
+      "promptFiles": ["prompts/03-conversation-cards.md"],
+      "image": "imgs/03-conversation-cards.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "04-memory-jar",
+      "promptFiles": ["prompts/04-memory-jar.md"],
+      "image": "imgs/04-memory-jar.png",
+      "ar": "16:9",
+      "quality": "normal"
+    }
+  ]
+}
+

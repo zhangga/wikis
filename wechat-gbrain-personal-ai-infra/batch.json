@@ -1,0 +1,33 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "cover",
+      "promptFiles": ["prompts/00-cover-gbrain-home-server.md"],
+      "image": "imgs/00-cover-gbrain-home-server.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "fragmented-vs-central",
+      "promptFiles": ["prompts/01-fragmented-vs-central-brain.md"],
+      "image": "imgs/01-fragmented-vs-central-brain.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "mcp-thin-client-flow",
+      "promptFiles": ["prompts/02-mcp-thin-client-flow.md"],
+      "image": "imgs/02-mcp-thin-client-flow.png",
+      "ar": "16:9",
+      "quality": "normal"
+    },
+    {
+      "id": "personal-ai-infra-checklist",
+      "promptFiles": ["prompts/03-personal-ai-infra-checklist.md"],
+      "image": "imgs/03-personal-ai-infra-checklist.png",
+      "ar": "16:9",
+      "quality": "normal"
+    }
+  ]
+}
