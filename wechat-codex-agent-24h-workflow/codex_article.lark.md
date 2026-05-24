@@ -1,4 +1,4 @@
-![封面：榨干 Codex](01_cover.png)
+![封面：榨干 Codex](imgs/01-cover.png)
 
 > **作者**：jason（[@jxnlco](https://x.com/jxnlco)） · OpenAI 早期产品工程师
 > **原文**：[Getting the most out of Codex](https://x.com/jxnlco/status/2057153744630890620)
@@ -24,7 +24,7 @@ OpenAI 工程师 jason 最近发了一篇万字长文 *Getting the most out of C
 
 下面，是这篇神作的中文精华版。
 
-![语音控制 + 实时操控的工作场景](02_voice_steering.png)
+![语音控制 + 实时操控的工作场景](imgs/02-voice-steering.png)
 
 ---
 
@@ -137,7 +137,7 @@ jason 介绍了两个全新的交互范式：
 
 如果说前面的能力是让 AI 更聪明，**这一节是让它长出手脚**。
 
-![工具与触达：Codex 串联起整个工作生态](03_tools_reach.png)
+![工具与触达：Codex 串联起整个工作生态](imgs/03-tools-reach.png)
 
 Codex 的"触手"由内向外可以分成三层：
 
@@ -172,7 +172,7 @@ Codex 的"触手"由内向外可以分成三层：
 
 `Codex Mobile App` 改变的不是"功能"，而是**你必须坐在桌前的执念**。
 
-![移动办公场景：人在外，AI 在打工](07_mobile.png)
+![移动办公场景：人在外，AI 在打工](imgs/07-mobile.png)
 
 典型的小场景：
 
@@ -200,7 +200,7 @@ Codex 的"触手"由内向外可以分成三层：
 - **线程自动化（Thread Automations）**：定时回到**同一个还活着的线程**，带着所有上下文继续推进。  
 </callout>
 
-![Chief of Staff：AI 参谋长每 30 分钟检查一次](06_chief_of_staff.png)
+![Chief of Staff：AI 参谋长每 30 分钟检查一次](imgs/06-chief-of-staff.png)
 
 来看 jason 给的一个真实指令——**每 30 分钟唤醒一次的 AI 参谋长**：
 
@@ -231,7 +231,7 @@ Codex 的"触手"由内向外可以分成三层：
 
 什么时候算完成？AI 自己也不知道。
 
-![Goals：从 Python 跑到 Rust，跑到测试通过为止](04_goals.png)
+![Goals：从 Python 跑到 Rust，跑到测试通过为止](imgs/04-goals.png)
 
 jason 给出的**强目标范式**长这样：
 
@@ -261,7 +261,7 @@ jason 给出的**强目标范式**长这样：
 
 ## 八、🪟 The Side Panel：让"产出"和"对话"挨在一起
 
-![侧边栏：对话产生工件，工件就在旁边](05_side_panel.png)
+![侧边栏：对话产生工件，工件就在旁边](imgs/05-side-panel.png)
 
 Side Panel 解决的是一个非常现实的问题：
 
@@ -289,7 +289,7 @@ Side Panel 让产出物**就活在对话旁边**：
 
 最后这一节，是给"长期主义者"的彩蛋。
 
-![共享记忆：AI 把笔记整齐地归档](08_shared_memory.png)
+![共享记忆：AI 把笔记整齐地归档](imgs/08-shared-memory.png)
 
 仅靠对话历史是不够的，jason 推荐了一个非常实战的模式——**用一个 Obsidian Vault 作为 AI 的长期记忆库**：
 
