@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.07"/>
+      </feComponentTransfer>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12" fill="none" stroke="#355C7D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="#F9F4EA"/>
+  <rect width="1200" height="675" filter="url(#paper)" opacity="0.55"/>
+  <text x="72" y="72" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#233142">今日主线：AI coding agent 正在离开“只写代码”</text>
+  <text x="72" y="112" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="20" fill="#59636E">从开发工具，扩展成业务、研究、市场洞察和企业部署的基础工作流</text>
+
+  <g fill="#fffdf8" stroke="#2F4858" stroke-width="3" stroke-linejoin="round">
+    <rect x="78" y="210" width="218" height="150" rx="20"/>
+    <rect x="346" y="210" width="218" height="150" rx="20"/>
+    <rect x="614" y="210" width="218" height="150" rx="20"/>
+    <rect x="882" y="210" width="218" height="150" rx="20"/>
+  </g>
+  <g fill="none" stroke="#355C7D" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M302 285 C322 274 326 274 340 285"/>
+    <path d="M570 285 C590 274 594 274 608 285"/>
+    <path d="M838 285 C858 274 862 274 876 285"/>
+  </g>
+
+  <g font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" text-anchor="middle">
+    <text x="187" y="258" font-size="27" font-weight="700" fill="#233142">写代码</text>
+    <text x="187" y="300" font-size="18" fill="#59636E">Codex / Claude Code</text>
+    <text x="187" y="326" font-size="18" fill="#59636E">生成与修改代码</text>
+
+    <text x="455" y="258" font-size="27" font-weight="700" fill="#233142">做材料</text>
+    <text x="455" y="300" font-size="18" fill="#59636E">docs / slides / sheets</text>
+    <text x="455" y="326" font-size="18" fill="#59636E">视觉标注与反馈</text>
+
+    <text x="723" y="258" font-size="27" font-weight="700" fill="#233142">跑业务</text>
+    <text x="723" y="300" font-size="18" fill="#59636E">研究 / 市场 / 数据</text>
+    <text x="723" y="326" font-size="18" fill="#59636E">从问题到交付</text>
+
+    <text x="991" y="258" font-size="27" font-weight="700" fill="#233142">进企业</text>
+    <text x="991" y="300" font-size="18" fill="#59636E">部署 / 权限 / 可观测</text>
+    <text x="991" y="326" font-size="18" fill="#59636E">可信工作区</text>
+  </g>
+
+  <g fill="#E9F3F1" stroke="#2F4858" stroke-width="2.5">
+    <path d="M90 464 C216 430 318 454 436 440 C564 426 650 484 786 456 C894 434 1000 432 1090 468 L1090 562 L90 562 Z"/>
+  </g>
+  <text x="108" y="505" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#233142">判断句</text>
+  <text x="108" y="538" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="21" fill="#3F4E5A">新的竞争点不是“谁能生成更多代码”，而是谁能把代码、文档、数据和部署串成一条稳定工作链路。</text>
+</svg>
